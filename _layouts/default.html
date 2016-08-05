@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">RSS Aggregator</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li{% if page.title == 'Aggregate Feeds' %} class="active"{% endif %}><a href="{{ site.url }}index.html">Home</a></li>
+            <li{% if page.title == 'Project Updates' %} class="active"{% endif %}><a href="{{ site.url }}updates/">Updates</a></li>
+            <li{% if page.title == 'About Project' %} class="active"{% endif %}><a href="{{ site.url }}about/">About</a></li>
+            <li{% if page.title == '' %} class="active"{% endif %}><a href="https://github.com/indieedtech/rss-aggregator">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div style="padding: 50px;">
+        {{ content }}
+      </div>
+    </div>
+    <script src="{{ site.url }}js/bootstrap.min.js"></script>
+  </body>
+</html>
