@@ -1,20 +1,86 @@
-title:        API Portal - Minimum Viable
-url:          http://portal.minimum.apievangelist.com
+# API Evangelist Portal (Minimum Viable)
 
-version:      1.1.1
-author:
-  name:       'Kin Lane'
-  email:      'info@apievangelist.com'
-markdown:     kramdown
+# This is mean to be a simple example of a portal for any API.
+# It provides a forkable portal, with checklist any API provider can follow.
+# It uses Jekyl, and can be controlled mostly via this _config.yml page.
 
-permalink: /:categories/:year/:month/:day/:title/
+# Kin Lane
+# http://apievangelist.com
+# @kinlane
+
+# Portal
+# Every API should have a simple portal providing access to the API and all supporting resources.
+
+# Name - Provide a simple name for your API / developer portal.
+portal_name: API Portal (Minimum Viable)
+
+#URL - developer.[yourdomain].com
+portal_url: http://portal.minimum.apievangelist.com
+
+#Description - Provide a concise description of what a platform does.
+portal_description: What does this platform do? What solutions do the APIs provide? Keep short as possible.
+
+Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
+
+signup / login
+create app
+get keys / token
+authentication
+docs
+terms
+code
+support
+
+#Documentation - Deliver, simple, clean, and up to date documentation, preferably of the interactive kind with a Swagger or API Blueprint behind.
+
+Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
+
+None / Open
+Basic Authentication
+API keys
+OAuth
+
+Self-Service Registration - How do I sign up? Give me a link to a self-service account signup, and make it as easy for me to create my new account, and go from idea to live integration as fast as possible—don’t make me wait for initial approval, that can come later.
+
+Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
+
+Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
+
+Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
+
+
+Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
+
+
+Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
+
+Rate Limits - Provide a clear overview of how the platform is rate limited, even if they are to protect service availability, let consumers know what to expect.
+
+
+Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
+
+Issues - What are the current issues.
+
+Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
+
+Status - Offer a real-time status dashboard of the platform, with a history view of platform status, that consumers can use as a decision making tool, as well as get current platform status.
+
+
+Github - Use Github for all aspects of your API platform operations from hosting code, to providing support via issues, to actually hosting your entire developer portal on Github Pages.
+
+Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
+
+APIs.json - A machine readable index of any API driven platform, providing a single place to find not just the API endpoints, but also all of the essential building blocks of API operations listed above.
+
+
+
+
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-paginate: 250
-paginate_path: "/updates/page:num"
+permalink: /:categories/:year/:month/:day/:title/
 
-categories_path : /categories.html
-tags_path : /tags.html
+paginate: 25
+paginate_path: "/blog/page:num"
 
 gems:
   - jekyll-redirect-from
