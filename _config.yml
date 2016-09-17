@@ -28,7 +28,7 @@ getting_started:
     # The link to signup for developer access
     signup_url: http://developer.apievangelist.com/signup
     # The link to login as developer
-    login_url: : http://developer.apievangelist.com/login
+    login_url: http://developer.apievangelist.com/login
     # The link to create a new application
     create_app_url: http://developer.apievangelist.com/user/app/create
     footer: This is the description for the getting started section of this API.
@@ -38,3 +38,21 @@ apis:
  - version: "1.0.0"
    # the domain of the service
    host: api.apievangelist.com
+   # array of all schemes that your API supports
+   schemes:
+    - https
+    # will be prefixed to all paths
+   basePath: /v1
+   produces:
+     - text/html
+     - application/json
+     - application/xml
+     - application/hal+json
+     - application/vnd.api+json
+     - application/vnd.collection+json
+     - application/vnd.siren+json
+   paths:
+     /products:
+       get:
+         summary: Products
+         description: The description   
