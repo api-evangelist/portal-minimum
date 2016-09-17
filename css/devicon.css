@@ -692,10 +692,16 @@
 }
 
 
+
 .devicon-php-plain {
 	width: 5em;
 
 }
+
+.devicon-php-plain path {
+	width: 5em;
+}
+
 .devicon-python-plain {
 	width: 5em;
 
