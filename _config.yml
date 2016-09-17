@@ -12,13 +12,13 @@
 # Every API should have a simple portal providing access to the API and all supporting resources.
 
 # Name - Provide a simple name for your API / developer portal.
-portal_name: Minimum Viable API Portal
+portal_name: 'Minimum Viable API Portal'
 
-#URL - developer.[yourdomain].com
+# URL - developer.[yourdomain].com
 portal_url: http://portal.minimum.apievangelist.com
 
-#Description - Provide a concise description of what a platform does.
-portal_description: What does this platform do? What solutions do the APIs provide? Keep short as possible.
+# Description - Provide a concise description of what a platform does.
+portal_description: 'What does this platform do? What solutions do the APIs provide? Keep short as possible.'
 
 #Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
 - getting_started:
