@@ -26,6 +26,8 @@ getting_started:
   - title: Getting Started With The API
     # A description for the getting started section.
     description: This is the description for the getting started section of this API.
+    # An image for the getting started section.
+    image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png  
     # The link to signup for developer access
     signup_url: http://developer.apievangelist.com/signup
     # The link to login as developer
