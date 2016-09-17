@@ -690,39 +690,3 @@
 .devicon-zend-plain:before {
 	content: "\ec04";
 }
-
-
-
-.devicon-php-plain {
-	width: 5em;
-
-}
-
-.devicon-php-plain path {
-	width: 5em;
-}
-
-.devicon-python-plain {
-	width: 5em;
-
-}
-.devicon-javascript-plain {
-	width: 5em;
-
-}
-.devicon-java-plain {
-	width: 5em;
-
-}
-.devicon-csharp-plain {
-	width: 5em;
-
-}
-.devicon-go-plain {
-	width: 5em;
-
-}
-.devicon-ruby-plain {
-	width: 5em;
-
-}
