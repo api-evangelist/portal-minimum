@@ -20,67 +20,292 @@ portal_url: http://portal.minimum.apievangelist.com
 #Description - Provide a concise description of what a platform does.
 portal_description: What does this platform do? What solutions do the APIs provide? Keep short as possible.
 
-Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
+#Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
+- getting_started:
+  title:
+  description:
+  # The link to signup for developer access
+  signup_url: http://developer.apievangelist.com/signup
+  # The link to login as developer
+  login_url: : http://developer.apievangelist.com/login
+  # The link to create a new application
+  create_app_url: http://developer.apievangelist.com/user/app/create
 
-signup / login
-create app
-get keys / token
-authentication
-docs
-terms
-code
-support
+#APIs
+- apis:
+    info:
+      title: Simple API
+      description: A brief description of what this API does
+      version: "1.0.0"
+    # the domain of the service
+    host: api.apievangelist.com
+    # array of all schemes that your API supports
+    schemes:
+      - https
+    # will be prefixed to all paths
+    basePath: /v1
+    produces:
+      - text/html
+      - application/json
+      - application/xml
+      - application/hal+json
+      - application/vnd.api+json
+      - application/vnd.collection+json
+      - application/vnd.siren+json
+    paths:
+      /products:
+        get:
+          summary: Products
+          description: The description
+          parameters:
+            - name: query
+              in: query
+              description: The query of search.
+              required: false
+              type: string
+              format: string
+          tags:
+            - Products
+          responses:
+            200:
+              description: An array of products
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Product'
+            default:
+              description: Unexpected error
+              schema:
+                $ref: '#/definitions/Error'
+      /services:
+        get:
+          summary: Services
+          description: The description
+          parameters:
+            - name: query
+              in: query
+              description: The query of search.
+              required: false
+              type: string
+              format: string
+          tags:
+            - Products
+          responses:
+            200:
+              description: An array of products
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Service'
+            default:
+              description: Unexpected error
+              schema:
+                $ref: '#/definitions/Error'
 
-#Documentation - Deliver, simple, clean, and up to date documentation, preferably of the interactive kind with a Swagger or API Blueprint behind.
 
-Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
+# Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
+- authentication:
+  # The overal authentication title & description
+  title:
+  description:
+  # The title & description if API is open.
+  open_title:
+  open_description:
+  # The title & description if API is open.
+  basic_title:
+  basic_description:
+  # The title & description if API is open.
+  keys_title:
+  keys_description:
+  # The title & description if API is open.
+  oAuth_title:
+  oAuth_description:
+  # The title & description if API is open.
+  other_title:
+  other_description:
+  # The footer for the content and page.
+  footer:
 
-None / Open
-Basic Authentication
-API keys
-OAuth
+# Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
+- code:
+    # The title and description for the code available for site.
+    title:
+    description:
+    github_org:
+    github_user:
+    samples:
+      - title: PHP
+        image: http://image.jpg
+        url: http://github.com/php
+      - title: Python
+        image: http://image.jpg
+        url: http://github.com/php
+      - title: Ruby
+        image: http://image.jpg
+        url: http://github.com/php
+    sdks:
+      - title: PHP
+        image: http://image.jpg
+        url: http://github.com/php
+      - title: Python
+        image: http://image.jpg
+        url: http://github.com/php
+      - title: Ruby
+        image: http://image.jpg
+        url: http://github.com/php
+    footer:
 
-Self-Service Registration - How do I sign up? Give me a link to a self-service account signup, and make it as easy for me to create my new account, and go from idea to live integration as fast as possible—don’t make me wait for initial approval, that can come later.
+# Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
+- direct_support:
+    # The title and description for the direct support available for site.
+    title:
+    description:
+    email: info@example.com
+    phone: 555-555-5555
+    ticket_url: http://ticket.com/
+    ticket_url_add: http://ticket.com/
+    chat_url: http://chat.com/
+    footer:
 
-Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
+# Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
+- self_service_support:
+    # The title and description for the self service support available for site.
+    title:
+    description:
+    github_issues: http://github.com/issues/
+    forum_url: http://forum.com
+    knowledgebase_url: http://knowledge.com
+    stack_exchange_url: http://stackexchange.com
+    footer:
 
-Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
+# Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
+- communication:
+    # The title and description for the self service support available for site.
+    title:
+    description:
+    blog_url:
+    blog_rss_url:
+    blog_atom_url:
+    twitter: @twitter
+    linkedin: @linkedin
+    github: @github
+    footer:
 
-Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
+# Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
+- plans:
+    # The title and description for the plan available for site.
+    title:
+    description:
+    tiers:
+      - title: Bronze
+        description: The description of the plan.
+        image: http://image.jpg
+        features:
+          - Feature One
+          - Feature Two
+          - Feature Three
+        limits:
+          - Limit One
+          - Limit Two
+          - Limit Three
+        signup_url: http://signup/url/
+      - title: Gold
+        description: The description of the plan.
+        image: http://image.jpg
+        features:
+          - Feature One
+          - Feature Two
+          - Feature Three
+        limits:
+          - Limit One
+          - Limit Two
+          - Limit Three
+        signup_url: http://signup/url/
+      - title: Silver
+        description: The description of the plan.
+        image: http://image.jpg
+        features:
+          - Feature One
+          - Feature Two
+          - Feature Three
+        limits:
+          - Limit One
+          - Limit Two
+          - Limit Three
+        signup_url: http://signup/url/
+    footer:
 
+# Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
+- road_map:
+    # The title and description for the road map available for site.
+    title:
+    description:
+    entries:
+      - title: Road Map Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Road Map Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Road Map Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+    footer:
 
-Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
+# Issues - What are the current issues.
+- issues:
+    # The title and description for the issues available for site.
+    title:
+    description:
+    status_page_url:
+    entries:
+      - title: Issues Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Issues Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Issues Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+    footer:
 
+# Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
+- change_log:
+    # The title and description for the change log available for site.
+    title:
+    description:
+    entries:
+      - title: Change Log Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Change Log Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+      - title: Change Log Entry Title
+        details: The details of the entry.
+        url: http://github.com/issue/
+    footer:
 
-Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
+# Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
+- legal_department:
+    # The title and description for the self service support available for site.
+    title:
+    description:
+    terms_of_service_url: http://github.com/issues/
+    privacy_url: http://forum.com
+    footer:
 
-Rate Limits - Provide a clear overview of how the platform is rate limited, even if they are to protect service availability, let consumers know what to expect.
+# Utility
 
+# Do not commit these files.
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md",".DS_Store"]
 
-Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
-
-Issues - What are the current issues.
-
-Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
-
-Status - Offer a real-time status dashboard of the platform, with a history view of platform status, that consumers can use as a decision making tool, as well as get current platform status.
-
-
-Github - Use Github for all aspects of your API platform operations from hosting code, to providing support via issues, to actually hosting your entire developer portal on Github Pages.
-
-Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
-
-APIs.json - A machine readable index of any API driven platform, providing a single place to find not just the API endpoints, but also all of the essential building blocks of API operations listed above.
-
-
-
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-
+# Jekyll blog settings
 permalink: /:categories/:year/:month/:day/:title/
-
 paginate: 25
 paginate_path: "/blog/page:num"
 
+# ruby add-on(s)
 gems:
   - jekyll-redirect-from
