@@ -689,3 +689,26 @@
 .devicon-zend-plain:before {
 	content: "\ec04";
 }
+
+
+.devicon-php-plain {
+  max-width: 2em;
+}
+.devicon-python-plain {
+  max-width: 2em;
+}
+.devicon-javascript-plain {
+  max-width: 2em;
+}
+.devicon-java-plain {
+  max-width: 2em;
+}
+.devicon-csharp-plain {
+  max-width: 2em;
+}
+.devicon-go-plain {
+  max-width: 2em;
+}
+.devicon-ruby-plain {
+  max-width: 2em;
+}
