@@ -12,7 +12,7 @@
 # Every API should have a simple portal providing access to the API and all supporting resources.
 
 # Name - Provide a simple name for your API / developer portal.
-portal_name: API Portal (Minimum Viable)
+portal_name: Minimum Viable API Portal
 
 #URL - developer.[yourdomain].com
 portal_url: http://portal.minimum.apievangelist.com
@@ -33,10 +33,7 @@ portal_description: What does this platform do? What solutions do the APIs provi
 
 #APIs
 - apis:
-    info:
-      title: Simple API
-      description: A brief description of what this API does
-      version: "1.0.0"
+    version: "1.0.0"
     # the domain of the service
     host: api.apievangelist.com
     # array of all schemes that your API supports
@@ -288,7 +285,7 @@ portal_description: What does this platform do? What solutions do the APIs provi
     footer:
 
 # Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
-- legal_department:
+- legal:
     # The title and description for the self service support available for site.
     title:
     description:
