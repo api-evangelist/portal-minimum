@@ -25,7 +25,7 @@ getting_started:
   # A title for the getting started section
   title: Getting Started With The API
   # A description for the getting started section.
-  description: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some steps to get started:
+  description: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some steps to get started.
   # An image for the getting started section.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png
 
