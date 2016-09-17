@@ -4957,8 +4957,6 @@ a.badge:focus {
 }
 .jumbotron {
   padding-top: 30px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
   color: inherit;
   background-color: #eee;
 }
