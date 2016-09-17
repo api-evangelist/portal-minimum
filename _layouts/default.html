@@ -10,10 +10,10 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="/">{{ site.portal_name }}</a>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/getting-started/">Getting Started</a></li>
-            <li><a href="/documentation/">Documentation</a></li>
-            <li><a href="/support/">Support</a></li>
+            <li{% if page.title == site.portal_name %} class="active"{% endif %}><a href="/">Home</a></li>
+            <li{% if page.title == site.getting_started.title %} class="active"{% endif %}><a href="/getting-started/">Getting Started</a></li>
+            <li{% if page.title == 'Documentation' %} class="active"{% endif %}><a href="/documentation/">Documentation</a></li>
+            <li{% if page.title == 'Support' %} class="active"{% endif %}><a href="/support/">Support</a></li>
           </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
