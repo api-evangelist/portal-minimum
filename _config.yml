@@ -20,8 +20,9 @@ portal_url: http://portal.minimum.apievangelist.com
 # Description - Provide a concise description of what a platform does.
 portal_description: 'What does this platform do? What solutions do the APIs provide? Keep short as possible.'
 
-#Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
+#Getting Started - This section gives developers all the informaiton they will need to get started using an API.
 getting_started:
+    # A title for the getting started section
   - title: Getting Started With The API
     # A description for the getting started section.
     description: This is the description for the getting started section of this API.
@@ -32,6 +33,33 @@ getting_started:
     # The link to create a new application
     create_app_url: http://developer.apievangelist.com/user/app/create
     footer: This is the description for the getting started section of this API.
+
+# Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
+authentication:
+ - # The overal authentication title & description
+   title: Authentication
+   description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
+   # The title & description if API is open.
+   open_title: Open API (Publicly Available)
+   open_description: We do not use authentication, with all API paths left open to the public.
+   open_url: http://example.com/open/
+   # The title & description if API is open.
+   basic_title: Basic Authentication
+   basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
+   basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
+   # The title & description if API is open.
+   keys_title: API Keys
+   keys_description: We employ a public keys and secret key for making calls to the API, sent as headers.
+   keys_url: http://en.wikipedia.org/wiki/Application_programming_interface_key
+   # The title & description if API is open.
+   oauth_title: OAuth
+   oauth_description: We use OAuth to secure access to the API, and manage access to informaiton.
+   oauth_url: http://en.wikipedia.org/wiki/OAuth
+   # The title & description if API is open.
+   other_title: Custom Authentication
+   other_description: We use a custom or proprietary approach to authentication for all API calls.
+   # The footer for the content and page.
+   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
 #APIs
 apis:
@@ -55,4 +83,4 @@ apis:
      /products:
        get:
          summary: Products
-         description: The description   
+         description: The description
