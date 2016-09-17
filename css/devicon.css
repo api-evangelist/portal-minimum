@@ -569,6 +569,7 @@
 
 .devicon-php-plain:before {
 	content: "\eb71";
+	width: 50px;
 }
 
 .devicon-postgresql-plain-wordmark:before {
