@@ -567,12 +567,6 @@
 	content: "\eb6d";
 }
 
-.devicon-php-plain {
-	content: "\eb71";
-	width: 25px;
-	height: 25px;
-}
-
 .devicon-php-plain:before {
 	content: "\eb71";
 }
