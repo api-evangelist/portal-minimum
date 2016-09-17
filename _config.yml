@@ -18,7 +18,7 @@ portal_name: 'Minimum Viable API Portal'
 portal_url: http://portal.minimum.apievangelist.com
 
 # Description - Provide a concise description of what a platform does.
-portal_description: 'What does this platform do? What solutions do the APIs provide? Keep short as possible.'
+portal_description: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
 
 #Getting Started - This section gives developers all the informaiton they will need to get started using an API.
 getting_started:
