@@ -41,7 +41,9 @@ getting_started:
   login_url: http://developer.apievangelist.com/login
 
   # The link to create a new application
+  create_app_label: Create a New Application & Get Your API Keys
   create_app_url: http://developer.apievangelist.com/user/app/create
+
   footer: You should close up your getting started steps with some other helpful information. Depending on the other building blocks you offer as part of API operations, you can provide links to other existing resources.<br /><br />If there is anything I can make smoother, or left out, please let me know.
 
 # Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
