@@ -23,6 +23,7 @@ portal_description: 'What does this platform do? What solutions do the APIs prov
 #Getting Started - Give everyone, even non-developers as place to start, helping us understand what is needed to get started with API integration, from signing up for an account to where do I find support.
 getting_started:
   - title: Getting Started With The API
+    # A description for the getting started section.
     description: This is the description for the getting started section of this API.
     # The link to signup for developer access
     signup_url: http://developer.apievangelist.com/signup
@@ -35,22 +36,22 @@ getting_started:
 #APIs
 apis:
  - version: "1.0.0"
-    # the domain of the service
-    host: api.apievangelist.com
-    # array of all schemes that your API supports
-    schemes:
-      - https
-    # will be prefixed to all paths
-    basePath: /v1
-    produces:
-      - text/html
-      - application/json
-      - application/xml
-      - application/hal+json
-      - application/vnd.api+json
-      - application/vnd.collection+json
-      - application/vnd.siren+json
-    paths:
+   # the domain of the service
+   host: api.apievangelist.com
+   # array of all schemes that your API supports
+   schemes:
+     - https
+     # will be prefixed to all paths
+     basePath: /v1
+     produces:
+        - text/html
+        - application/json
+        - application/xml
+        - application/hal+json
+        - application/vnd.api+json
+        - application/vnd.collection+json
+        - application/vnd.siren+json
+      paths:
       /products:
         get:
           summary: Products
@@ -71,30 +72,6 @@ apis:
                 type: array
                 items:
                   $ref: '#/definitions/Product'
-            default:
-              description: Unexpected error
-              schema:
-                $ref: '#/definitions/Error'
-      /services:
-        get:
-          summary: Services
-          description: The description
-          parameters:
-            - name: query
-              in: query
-              description: The query of search.
-              required: false
-              type: string
-              format: string
-          tags:
-            - Products
-          responses:
-            200:
-              description: An array of products
-              schema:
-                type: array
-                items:
-                  $ref: '#/definitions/Service'
             default:
               description: Unexpected error
               schema:
