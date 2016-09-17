@@ -1,1 +1,15 @@
+# API Evangelist Portal (Minimum Viable)
+
+# This is mean to be a simple example of a portal for any API.
+# It provides a forkable portal, with checklist any API provider can follow.
+# It uses Jekyl, and can be controlled mostly via this _config.yml page.
+
+# Kin Lane
+# http://apievangelist.com
+# @kinlane
+
+# Portal
+# Every API should have a simple portal providing access to the API and all supporting resources.
+
+# Name - Provide a simple name for your API / developer portal.
 portal_name: 'Minimum Viable API Portal'
