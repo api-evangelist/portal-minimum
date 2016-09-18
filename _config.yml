@@ -124,10 +124,62 @@ api:
      get:
       summary: Products
       description: The description of the product.
+      parameters:
+        - name: query
+          in: query
+          description: The query of search.
+          required: false
+          type: string
+          format: string
+        - name: page
+          in: query
+          description: The page to show.
+          required: false
+          type: string
+          format: string
+      tags:
+        - Products
+      responses:
+        200:
+          description: An array of products
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
     /services:
      get:
       summary: Services
       description: The description of the service.
+      parameters:
+        - name: query
+          in: query
+          description: The query of search.
+          required: false
+          type: string
+          format: string
+        - name: page
+          in: query
+          description: The page to show.
+          required: false
+          type: string
+          format: string
+      tags:
+        - Products
+      responses:
+        200:
+          description: An array of products
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'       
 
 # Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
 code:

@@ -37,30 +37,40 @@ title: '{{ site.documentation.title }}'
 
              {% assign summary = verb_detail.summary %}
              {% assign description = verb_detail.description %}
+
+             {% assign parameters = verb_detail.parameters %}
+
              <h4><a name="#{{ path_name }}"></a>{{ summary }}</h4>
              <p>{{ path_name }}</a> ({{ verb_name | upcase }})</p>
              <p>{{ description }}</p>
-             <p><strong>Parameters:</strong></p>
-             <table class="table table-striped">
-               <thead>
-                 <tr>
-                   <th>#</th>
-                   <th>Header</th>
-                   <th>Header</th>
-                   <th>Header</th>
-                   <th>Header</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr>
-                   <td>1,001</td>
-                   <td>Lorem</td>
-                   <td>ipsum</td>
-                   <td>dolor</td>
-                   <td>sit</td>
-                 </tr>
-               </tbody>
-             </table>
+
+             <!-- List All the Parameters-->
+             {% if verb_detail.parameters %}
+               <p><strong>Parameters:</strong></p>
+               <table class="table table-striped">
+                 <thead>
+                   <tr>
+                     <th>name</th>
+                     <th>in</th>
+                     <th>description</th>
+                     <th>required</th>
+                     <th>type</th>
+                     <th>format</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   {% for parameter in parameters %}
+                   <tr>
+                     <td>{{ parameter.name }}</td>
+                     <td>{{ parameter.description }}</td>
+                     <td>{{ parameter.required }}</td>
+                     <td>{{ parameter.type }}</td>
+                     <td>{{ parameter.format }}</td>
+                   </tr>
+                   {% endfor %}
+                 </tbody>
+               </table>
+             {% endif %}
 
            {% endfor %}
          {% endfor %}
