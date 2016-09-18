@@ -106,6 +106,7 @@ title: '{{ site.documentation.title }}'
          {% endfor %}
 
          <!-- Definitions -->
+         <h4>Definitions</h4>
          {% for definition in site.api.definitions %}
 
            {% assign definition_name = definition[0] %}
@@ -113,13 +114,13 @@ title: '{{ site.documentation.title }}'
 
            <a name="#{{ definition_name }}"></a>
 
-           <h4>{{ definition_name }}</h4>
+           <h5>{{ definition_name }}</h5>
 
            {% for def in definition_detail %}
 
            {% assign definition_type = def.type %}
            {% assign definition_properties = def.properties %}
-
+           --{{ definition_properties }}--
            <!-- List All the Parameters-->
            {% if def.properties %}
              <p><strong>Properties:</strong></p>
