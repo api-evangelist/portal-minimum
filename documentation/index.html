@@ -12,12 +12,7 @@ title: '{{ site.documentation.title }}'
          <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
          {% for path in site.api.paths limit:25 %}
            {% assign path_name = path[0] %}
-           {% assign path_detail = path[1] %}
-           {% for verb in path_detail %}
-             {% assign verb_name = verb[0] %}
-             {% assign verb_detail = verb[1] %}
-             <li><a href="/documentation/index.html#{{ path_name }}">{{ path_name }}</a> ({{ verb_name | upcase }})</li>
-           {% endfor %}
+             <li><a href="/documentation/index.html#{{ path_name }}">{{ path_name }}</a></li>
          {% endfor %}
        </ul>
 
@@ -31,6 +26,7 @@ title: '{{ site.documentation.title }}'
          {% for path in site.api.paths limit:25 %}
            {% assign path_name = path[0] %}
            {% assign path_detail = path[1] %}
+           <a name="#{{ path_name }}"></a>
            {% for verb in path_detail %}
              {% assign verb_name = verb[0] %}
              {% assign verb_detail = verb[1] %}
@@ -40,7 +36,7 @@ title: '{{ site.documentation.title }}'
 
              {% assign parameters = verb_detail.parameters %}
 
-             <h4><a name="#{{ path_name }}"></a>{{ summary }}</h4>
+             <h4>{{ summary }}</h4>
              <p>{{ path_name }}</a> ({{ verb_name | upcase }})</p>
              <p>{{ description }}</p>
 
