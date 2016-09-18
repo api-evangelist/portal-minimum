@@ -8,8 +8,7 @@
 # http://apievangelist.com
 # @kinlane
 
-# Portal
-# Every API should have a simple portal providing access to the API and all supporting resources.
+# General Portal
 
 # Name - Provide a simple name for your API / developer portal.
 portal_title: '{"API Portal"}'
@@ -25,7 +24,7 @@ portal_descriptiactive: This is a forkable, resusable API portal that runs using
 portal_contact_name: Kin Lane
 portal_contact_email: info@apievangelist.com
 
-#Getting Started - This section gives developers all the informaiton they will need to get started using an API.
+#Getting Started
 getting_started:
 
   # Turn on the getting started
@@ -41,12 +40,12 @@ getting_started:
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png
 
   # The link to signup for developer access
-  signup_active: true;
+  signup_active: true
   signup_label: Signup
   signup_url: http://portal.minimum.apievangelist.com/signup
 
   # The link to login as developer
-  login_active: true;
+  login_active: true
   login_label: Login
   login_url: http://portal.minimum.apievangelist.com/login
 
@@ -56,7 +55,7 @@ getting_started:
 
   footer: You should close up your getting started steps with some other helpful information. Depending on the other building blocks you offer as part of API operations, you can provide links to other existing resources.<br /><br />Make sure and let your users know that you are there if they need help, and to contact you with questions, or if there is anything that can done to make it easier--always be improving on the getting started process.
 
-# Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
+# Authentication
 authenticatiactive:
 
   # Turn on the authentication
@@ -109,7 +108,7 @@ documentatiactive:
   documentation_label: Visit Documentation
   documentation_url: http://portal.minimum.apievangelist.com/documentation/
 
-# Listing of all the APIs
+# APIs
 api:
 
   # The version for the API(s)
@@ -227,7 +226,7 @@ api:
           type: string
           descriptiactive: Description of product.
 
-# Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
+# Code
 code:
 
   # Turn on the code page
@@ -255,7 +254,7 @@ code:
   # The closing text for the code page.
   footer: If there are specific languages or code platforms you'd like to see code available for please let us know. Sometimes it will makes sense to add a specific platform we haven't thought of.
 
-# Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
+# Communication
 communication:
 
   # Turn on the communications page
@@ -283,10 +282,10 @@ communication:
 
   footer: Even if an API is a side project, we can make sure and setup as well as monitor a handful of common communication channels. Successful API providers are using blogs, Twitter, and Github to efficiently manage platform communications for their APIs.
 
-# Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
+# Pricing
 plans:
 
-  active: true;
+  active: true
 
   # The title and description for the plan available for site.
   title: API Plans
@@ -331,7 +330,13 @@ plans:
 
   footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get there.<br /><br />Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
 
-# Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
+# Support
+support:
+
+  # Turn on support in general
+  active: true
+
+# Direct Support
 direct_support:
 
   # Turn on the direct support
@@ -347,12 +352,6 @@ direct_support:
   chat_label: Chat With Us
   chat_url: http://chat.com/
   footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
-
-# Support
-support:
-
-  # Turn on support in general
-  active: true
 
 # Self-Service Support
 self_service_support:
@@ -379,9 +378,9 @@ self_service_support:
 updates:
 
   # Turn on updates
-  active: true;
+  active: true
 
-# Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
+# Roadmap
 road_map:
 
   # Turn on the road map
@@ -422,7 +421,7 @@ road_map:
   # Closing up the text for the page.
   footer: We try to share as much information as possible regarding where we are taking the platform, and will update on a regular basis.
 
-# Issues - What are the current issues.
+# Issues
 issues:
 
   # Turn on the issues
@@ -465,7 +464,7 @@ issues:
   # Closing up the text for the page.
   footer: We will try to post everything here that is currently going on, and share any problems that come up as they occur, and will take them down when resolved.
 
-# Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
+# Change Log
 change_log:
 
   # Turn on the change log
@@ -506,7 +505,7 @@ change_log:
   # Closing up the text for the page.
   footer: We try to share as much information as possible regarding where what has changed with the platform, and updating on a regular basis.
 
-# Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
+# Legal Department
 legal:
 
   terms_of_service_active: true
