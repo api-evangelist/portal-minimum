@@ -11,30 +11,35 @@
           <a class="navbar-brand" href="/">{{ site.portal_title }}</a>
           <ul class="nav navbar-nav">
             <li{% if page.title == site.portal_name %} class="active"{% endif %}><a href="/">Home</a></li>
-            <li{% if page.title == site.getting_started.title %} class="active"{% endif %}><a href="/getting-started/">Getting Started</a></li>
-            <li{% if page.title == 'Authentication' %} class="active"{% endif %}><a href="/authentication/">Auth</a></li>
+            {% if site.getting_started.on == true %}<li{% if page.title == site.getting_started.title %} class="active"{% endif %}><a href="/getting-started/">Getting Started</a></li>{% endif %}
+            {% if site.authentication.on == true %}<li{% if page.title == 'Authentication' %} class="active"{% endif %}><a href="/authentication/">Auth</a></li>{% endif %}
             <li{% if page.title == 'Documentation' %} class="active"{% endif %}><a href="/documentation/">Docs</a></li>
-            <li{% if page.title == 'Plans' %} class="active"{% endif %}><a href="/plans/">Plans</a></li>
-            <li{% if page.title == site.code.title %} class="active"{% endif %}><a href="/code/">Code</a></li>
-            <li{% if page.title == site.communication.title %} class="active"{% endif %}><a href="/communications/">Communications</a></li>
-            <li class="dropdown">
+            {% if site.plans.on == true %}<li{% if page.title == 'Plans' %} class="active"{% endif %}><a href="/plans/">Plans</a></li>{% endif %}
+            {% if site.code.on == true %}<li{% if page.title == site.code.title %} class="active"{% endif %}><a href="/code/">Code</a></li>{% endif %}
+            {% if site.communication.on == true %}<li{% if page.title == site.communication.title %} class="active"{% endif %}><a href="/communications/">Communications</a></li>{% endif %}
+            {% if site.updates.on == true %}<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Updates <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/change-log/">Change Log</a></li>
-                <li><a href="/issues/">Issues</a></li>
-                <li><a href="/road-map/">Road Map</a></li>
+                {% if site.change_log.on == true %}<li><a href="/change-log/">Change Log</a></li>{% endif %}
+                {% if site.issues.on == true %}<li><a href="/issues/">Issues</a></li>{% endif %}
+                {% if site.road_map.on == true %}<li><a href="/road-map/">Road Map</a></li>{% endif %}
               </ul>
             </li>
-            <li{% if page.title == 'Support' %} class="active"{% endif %}><a href="/support/">Support</a></li>
+            {% endif %}
+            {% if site.support.on == true %}<li{% if page.title == 'Support' %} class="active"{% endif %}><a href="/support/">Support</a></li>{% endif %}
           </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          {% if site.getting_started.signup_on == true %}
           <form class="navbar-form navbar-right">
-            <button type="submit" class="btn btn-success">Sign Up</button>
+            <button type="submit" class="btn btn-success">{{ site.getting_started.signup_label }}</button>
           </form>
+          {% endif %}
+          {% if site.getting_started.login_on == true %}
           <form class="navbar-form navbar-right">
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success">{{ site.getting_started.login_label }}</button>
           </form>
+          {% endif %}
         </div>
       </div>
     </nav>
