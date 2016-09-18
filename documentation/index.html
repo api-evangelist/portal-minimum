@@ -13,7 +13,9 @@ title: '{{ site.documentation.title }}'
          <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
          {% for path in site.api.paths limit:25 %}
            {% assign path_name = path[0] %}
-             <li><a href="/documentation/index.html#path-{{ path_name }}"><strong>{{ path_name }}</strong></a></li>
+           {% assign clean_path_name = path_name | downcase %}
+           {% assign clean_path_name = clean_path_name | replace: '/', '' %}
+             <li><a href="/documentation/index.html#path-{{ clean_path_name }}"><strong>{{ path_name }}</strong></a></li>
          {% endfor %}
        </ul>
 
@@ -22,7 +24,9 @@ title: '{{ site.documentation.title }}'
          {% for definition in site.api.definitions %}
 
            {% assign definition_name = definition[0] %}
-             <li><a href="/documentation/index.html#definition-{{ definition_name }}"><strong>{{ definition_name }}</strong></a></li>
+           {% assign clean_definition_name = definition_name | downcase %}
+           {% assign clean_definition_name = clean_definition_name | replace: '/', '' %}
+          <li><a href="/documentation/index.html#definition-{{ clean_definition_name }}"><strong>{{ definition_name }}</strong></a></li>
          {% endfor %}
        </ul>
 
@@ -40,10 +44,12 @@ title: '{{ site.documentation.title }}'
          {% for path in site.api.paths %}
 
            {% assign path_name = path[0] %}
-           {% assign path_name_clean = path_name | replace: '/', '' %}
+           {% assign clean_path_name = path_name | downcase %}
+           {% assign clean_path_name = clean_path_name | replace: '/', '' %}
+
            {% assign path_detail = path[1] %}
 
-           <a name="#path-{{ path_name }}"></a>
+           <a name="path-{{ clean_path_name }}"></a>
 
            {% for verb in path_detail %}
 
@@ -127,12 +133,15 @@ title: '{{ site.documentation.title }}'
          {% for definition in site.api.definitions %}
 
            {% assign definition_name = definition[0] %}
+           {% assign clean_definition_name = definition_name | downcase %}
+           {% assign clean_definition_name = clean_definition_name | replace: '/', '' %}
+
            {% assign definition_detail = definition[1] %}
 
            {% assign definition_type = definition_detail.type %}
            {% assign definition_properties = definition_detail.properties %}
 
-           <a name="#definition-{{ definition_name }}"></a>
+           <a name="definition-{{ clean_definition_name }}"></a>
            <h4 style="padding-top:10px; padding-bottom:10px;">{{ definition_name }} ({{ definition_type }})</h4>
 
              <!-- List All the Parameters-->
