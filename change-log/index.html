@@ -1,22 +1,28 @@
 ---
-layout: page
-title: Change Log
+layout: inner
+title: '{{ site.change_log.title }}'
 ---
 
-<p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-recycling.jpg" align="right" width="150" style="padding: 15px;" /></p>
-<p>This is the current change log around this template API portal which just lists <a href="https://github.com/api-commons/api-portal/issues">issues from the Github repository</a> for this project. If you wish to contribute, <a href="https://github.com/api-commons/api-portal/issues/new">submit an issue or comment via this Github repository</a>.</p>
+<div class="container">
+  <div class="row">
 
-<script type="text/javascript">
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
 
-GITHUB_ISSUES_USER = "api-commons";
-GITHUB_ISSUES_REPO = "api-portal";
+  		{% if site.change_log.image %}<img src="{{ site.change_log.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+  		<h3>{{ site.change_log.title }}</h3>
+  		<p>{{ site.change_log.description }}</p>
 
-GITHUB_ISSUES_LABELS = "changelog";
-</script>
+      <ul>
+  	  {% for entry in site.change_log.entries %}
+        <li><a href="{{ entry.url }}">{{ entry.title }}</a> ({{ entry.date }}) - {{ entry.details }}</li>
+      {% endfor %}
+      </ul>
 
-<div id="github-issues-widget"></div>
+  		<p>{{ site.change_log.footer }}</p>
 
-<script type="text/javascript" src="https://s3.amazonaws.com/kinlane-productions/js/github-issues.js"></script>
-<script type="text/javascript">
-    GithubIssuesWidget.go();
-</script>
+  </div>
+  <div class="col-md-1"></div>
+
+	</div>
+</div>

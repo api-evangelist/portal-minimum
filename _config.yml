@@ -204,3 +204,95 @@ self_service_support:
     stack_exchange_url: http://stackexchange.com
 
     footer: If there is a place we should be offering support that might reach you, and other developers please let us know of where we might connect with you.
+
+# Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
+road_map:
+
+  # The title of the road map
+  title: Road Map
+
+  # The description of the road map
+  description: This is the road map for this platform, providing as much detail as possible about where we are taking the platform.
+
+  # Am image to show on the road map page
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-roadmap.png
+
+  # These are the road map entries you want to share.
+  entries:
+    - title: Road Map Entry Title
+      date: 09/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Road Map Entry Title
+      date: 08/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Road Map Entry Title
+      date: 07/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+
+  # Closing up the text for the page.
+  footer: We try to share as much information as possible regarding where we are taking the platform, and will update on a regular basis.
+
+# Issues - What are the current issues.
+issues:
+
+  # The title of the road map
+  title: Issues
+
+  # The description of the road map
+  description: These are the current issue for this platform, providing as much detail as possible about anything that is currently impacting things.
+
+  # Am image to show on issues page
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-issue.png
+
+  status_url: http://example.com/status/
+
+  # These are the road map entries you want to share.
+  entries:
+    - title: Issues Entry Title
+      date: 09/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Issues Entry Title
+      date: 08/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Issues Entry Title
+      date: 07/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+
+  # Closing up the text for the page.
+  footer: We will try to post everything here that is currently going on, and share any problems that come up as they occur, and will take them down when resolved.
+
+# Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
+change_log:
+
+  # The title of the road map
+  title: Change Log
+
+  # The description of the road map
+  description: This is the change log for this platform, providing as much detail as possible about what has changed with the platform.
+
+  # Am image to show on change log page
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-change.png
+
+  # These are the road map entries you want to share.
+  entries:
+    - title: Change Log Entry Title
+      date: 09/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Change Log Entry Title
+      date: 08/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Change Log Entry Title
+      date: 07/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+
+  # Closing up the text for the page.
+  footer: We try to share as much information as possible regarding where what has changed with the platform, and updating on a regular basis.

@@ -1,23 +1,28 @@
 ---
-layout: page
-title: Issues
+layout: inner
+title: '{{ site.issues.title }}'
 ---
 
-<p><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-bug.png" align="right" width="150" style="padding: 15px;" /></p>
+<div class="container">
+  <div class="row">
 
-<p>This is the current issues around the APIs, which just lists <a href="https://github.com/api-commons/api-portal/issues">issues from the Github repository</a> for this project. If you wish to contribute, <a href="https://github.com/api-commons/api-portal/issues/new">submit an issue or comment via this Github repository</a>.</p>
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
 
-<script type="text/javascript">
+  		{% if site.issues.image %}<img src="{{ site.issues.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+  		<h3>{{ site.issues.title }}</h3>
+  		<p>{{ site.issues.description }}</p>
+      {% if site.issues.status_url %}<p><strong>Status Page:</strong> {{ site.issues.status_url }}</p>{% endif %}
+      <ul>
+  	  {% for entry in site.issues.entries %}
+        <li><a href="{{ entry.url }}">{{ entry.title }}</a> ({{ entry.date }}) - {{ entry.details }}</li>
+      {% endfor %}
+      </ul>
 
-GITHUB_ISSUES_USER = "api-commons";
-GITHUB_ISSUES_REPO = "api-portal";
+  		<p>{{ site.issues.footer }}</p>
 
-GITHUB_ISSUES_LABELS = "known";
-</script>
+  </div>
+  <div class="col-md-1"></div>
 
-<div id="github-issues-widget"></div>
-
-<script type="text/javascript" src="https://s3.amazonaws.com/kinlane-productions/js/github-issues.js"></script>
-<script type="text/javascript">
-    GithubIssuesWidget.go();
-</script>
+	</div>
+</div>

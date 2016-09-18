@@ -5,17 +5,25 @@ title: '{{ site.authentication.title }}'
 
 <div class="container">
   <div class="row">
-		{% if site.authentication.image %}<img src="{{ site.authentication.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
-		<h3>{{ site.authentication.title }}</h3>
-		{% if site.authentication.description %}<p>{{ site.authentication.description }}</p>{% endif %}
-		<ul>
-			{% if site.authentication.open_url %}<li><a href="{{ site.authentication.open_url }}"><strong>{{ site.authentication.open_title }}</strong></a> - {{ site.authentication.open_description }}</li>{% endif %}
-			{% if site.authentication.basic_url %}<li><a href="{{ site.authentication.basic_url }}"><strong>{{ site.authentication.basic_title }}</strong></a> - {{ site.authentication.basic_description }}</li>{% endif %}
-			{% if site.authentication.keys_url %}<li><a href="{{ site.authentication.keys_url }}"><strong>{{ site.authentication.keys_title }}</strong></a> - {{ site.authentication.keys_description }}</li>{% endif %}
-			{% if site.authentication.oauth_url %}<li><a href="{{ site.authentication.oauth_url }}"><strong>{{ site.authentication.oauth_title }}</strong></a> - {{ site.authentication.oauth_description }}</li>{% endif %}
-			{% if site.authentication.json_web_token_url %}<li><a href="{{ site.authentication.json_web_token_url }}"><strong>{{ site.authentication.json_web_token_title }}</strong></a> - {{ site.authentication.json_web_token_description }}</li>{% endif %}
-			{% if site.authentication.other_url %}<li><a href="{{ site.authentication.other_url }}"><strong>{{ site.authentication.other_title }}</strong></a> - {{ site.authentication.other_description }}</li>{% endif %}
-		</ul>
-		{% if site.authentication.footer %}<p>{{ site.authentication.footer }}</p>{% endif %}
+
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+
+  		{% if site.authentication.image %}<img src="{{ site.authentication.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+  		<h3>{{ site.authentication.title }}</h3>
+  		{% if site.authentication.description %}<p>{{ site.authentication.description }}</p>{% endif %}
+  		<ul>
+  			{% if site.authentication.open_url %}<li><a href="{{ site.authentication.open_url }}"><strong>{{ site.authentication.open_title }}</strong></a> - {{ site.authentication.open_description }}</li>{% endif %}
+  			{% if site.authentication.basic_url %}<li><a href="{{ site.authentication.basic_url }}"><strong>{{ site.authentication.basic_title }}</strong></a> - {{ site.authentication.basic_description }}</li>{% endif %}
+  			{% if site.authentication.keys_url %}<li><a href="{{ site.authentication.keys_url }}"><strong>{{ site.authentication.keys_title }}</strong></a> - {{ site.authentication.keys_description }}</li>{% endif %}
+  			{% if site.authentication.oauth_url %}<li><a href="{{ site.authentication.oauth_url }}"><strong>{{ site.authentication.oauth_title }}</strong></a> - {{ site.authentication.oauth_description }}</li>{% endif %}
+  			{% if site.authentication.json_web_token_url %}<li><a href="{{ site.authentication.json_web_token_url }}"><strong>{{ site.authentication.json_web_token_title }}</strong></a> - {{ site.authentication.json_web_token_description }}</li>{% endif %}
+  			{% if site.authentication.other_url %}<li><a href="{{ site.authentication.other_url }}"><strong>{{ site.authentication.other_title }}</strong></a> - {{ site.authentication.other_description }}</li>{% endif %}
+  		</ul>
+  		{% if site.authentication.footer %}<p>{{ site.authentication.footer }}</p>{% endif %}
+
+    </div>
+    <div class="col-md-1"></div>
+
 	</div>
 </div>

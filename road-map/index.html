@@ -1,0 +1,28 @@
+---
+layout: inner
+title: '{{ site.road_map.title }}'
+---
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+
+  		{% if site.road_map.image %}<img src="{{ site.road_map.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+  		<h3>{{ site.road_map.title }}</h3>
+  		<p>{{ site.road_map.description }}</p>
+
+      <ul>
+  	  {% for entry in site.road_map.entries %}
+        <li><a href="{{ entry.url }}">{{ entry.title }}</a> ({{ entry.date }}) - {{ entry.details }}</li>
+      {% endfor %}
+      </ul>
+
+  		<p>{{ site.road_map.footer }}</p>
+
+  </div>
+  <div class="col-md-1"></div>
+
+	</div>
+</div>
