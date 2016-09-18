@@ -256,7 +256,7 @@ code:
   footer: If there are specific languages or code platforms you'd like to see code available for please let us know. Sometimes it will makes sense to add a specific platform we haven't thought of.
 
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
-communicatiactive:
+communication:
 
   # Turn on the communications page
   active: true
@@ -285,6 +285,8 @@ communicatiactive:
 
 # Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
 plans:
+
+  active: true;
 
   # The title and description for the plan available for site.
   title: API Plans
@@ -346,7 +348,13 @@ direct_support:
   chat_url: http://chat.com/
   footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
 
-# Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
+# Support
+support:
+
+  # Turn on support in general
+  active: true
+
+# Self-Service Support
 self_service_support:
 
   # Turn on the self service support
