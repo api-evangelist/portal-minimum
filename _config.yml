@@ -76,7 +76,7 @@ authentication:
 # Listing of all the APIs
 api:
   # The version for the API(s)
-  version: "1.0.0"
+  version: 1.0.0
   # the domain of the service
   host: api.example.com
   # array of all schemes that your API supports
