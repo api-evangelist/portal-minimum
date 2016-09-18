@@ -123,6 +123,9 @@ communication:
   # The title for the platform communications page
   title: Platform Communications
 
+  # Am image to show on communications page
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
+
   # A description for the platform communications page
   description: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
 
