@@ -16,7 +16,7 @@ layout: none
   "basePath": "{{ site.api.basePath }}",
   "schemes": [
     {% for scheme in site.api.schemes %}
-    "{{ scheme }}"{% if forloop.last == false %},{% endif %}  {% endfor %}
+    "{{ scheme }}"{% if forloop.last == false %},{% endif %}
     {% endfor %}
   ],
   "paths": {
