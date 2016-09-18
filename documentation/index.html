@@ -12,7 +12,7 @@ title: '{{ site.documentation.title }}'
          <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
          {% for path in site.api.paths limit:25 %}
            {% assign path_name = path[0] %}
-             <li><a href="/documentation/index.html#{{ path_name }}">{{ path_name }}</a></li>
+             <li><a href="/documentation/index.html#{{ path_name }}"><strong>{{ path_name }}</strong></a></li>
          {% endfor %}
        </ul>
 
