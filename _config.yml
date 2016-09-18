@@ -324,7 +324,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
 
-  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get ther.<br /><br />Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
+  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get there.<br /><br />Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
 
 # Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
 direct_support:
