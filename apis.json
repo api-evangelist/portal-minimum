@@ -1,0 +1,112 @@
+---
+layout: none
+---
+
+{
+  "name": "{{ site.project_title }}",
+  "description": "{{ site.project_title }}",
+  "image": "https://s3.amazonaws.com/kinlane-productions/adopta-agency/adopta-agency-logo-uppercase.png",
+  "tags": [
+    {% for tags in site.project_tags limit:10 %}
+    "Kin Lane"{% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+  ],
+  "created": "{{ page.date | date: "%Y-%m-%d" }}",
+  "modified": "{{ page.date | date: "%Y-%m-%d" }}",
+  "url": "{{ site.project_url }}",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Master",
+      "description": "This is the master portal for all of the Kin Lane APIs.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/kin.png",
+      "humanURL": "{{ site.project_url }}",
+      "baseURL": "{{ site.project_url }}//apis.json",
+      "tags": [
+        {% for tags in site.project_tags limit:10 %}
+        "Kin Lane"{% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+      ],
+      "properties": [
+        {
+          "type": "X-blog",
+          "url": "{{ site.project_url }}/blog/"
+        },
+        {
+          "type": "X-blog-rss-feed",
+          "url": "{{ site.project_url }}/blog.xml"
+        },
+        {% if site.changelog_show == true %}
+        {
+          "type": "X-change-log",
+          "url": "https://kin-lane.github.io/master/change-log/"
+        },
+        {% endif %}
+        {% if site.faq_show == true %}
+        {
+          "type": "X-faq",
+          "url": "https://kin-lane.github.io/master/faq/"
+        },
+        {% endif %}
+        {% if site.roadmap_show == true %}
+        {
+          "type": "X-roadmap",
+          "url": "https://kin-lane.github.io/master/roadmap/"
+        },
+        {% endif %}
+        {
+          "type": "X-github",
+          "url": "https://github.com/{{ site.github_user }}/{{ site.github_repo }}"
+        },
+        {
+          "type": "X-issues",
+          "url": "https://github.com/{{ site.github_user }}/{{ site.github_repo }}/issues"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "{{ site.support_title }}",
+          "email": "{{ site.support_email }}",
+          "X-twitter": "{{ site.support_twitter }}"
+        }
+      ]
+    },
+    {% for api in site.api limit:100 %}
+    {
+      "name": "{{ api.title }}",
+      "humanURL": "{{ site.project_url }}",
+      "baseURL": "{{ site.project_url }}",
+      "tags": [
+        {% for tags in site.project_tags limit:10 %}
+        "Kin Lane"{% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+      ],
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "{{ api.swagger_url }}"
+        },
+        {
+          "type": "X-documentation",
+          "url": "{{ site.project_url }}/documentation/?swagger_url={{ api.swagger_url }}"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "{{ site.support_title }}",
+          "email": "{{ site.support_email }}",
+          "X-twitter": "{{ site.support_twitter }}"
+        }
+      ]
+    }{% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+  ],
+  "include": [],
+  "maintainers": [
+    {
+      "FN": "{{ site.support_title }}",
+      "email": "{{ site.support_email }}",
+      "X-twitter": "{{ site.support_twitter }}"
+    }
+  ]
+}

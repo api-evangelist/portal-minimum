@@ -179,7 +179,7 @@ api:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'       
+            $ref: '#/definitions/Error'
 
 # Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
 code:
