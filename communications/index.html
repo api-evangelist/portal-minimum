@@ -8,14 +8,66 @@ title: '{{ site.communication.title }}'
 		<img src="{{ site.communication.image }}" align="right" width="25%" style="padding: 15px;" />
 		<h3>{{ site.communication.title }}</h3>
 		<p>{{ site.communication.description }}</p>
-		<ul>
-			{% if site.communication.blog_url %}<li><a href="{{ site.communication.blog_url }}">Blog</a></li>{% endif %}
-      {% if site.communication.blog_rss_url %}<li><a href="{{ site.communication.blog_rss_url }}">Blog RSS</a></li>{% endif %}
-      {% if site.communication.blog_atom_url %}<li><a href="{{ site.communication.blog_atom_url }}">Blog Atom</a></li>{% endif %}
-      {% if site.communication.twitter_user %}<li><a href="{{ site.communication.twitter_user }}">Twitter</a></li>{% endif %}
-      {% if site.communication.linkedin_user %}<li><a href="{{ site.communication.linkedin_user }}">LinkedIn</a></li>{% endif %}
-      {% if site.communication.github_user %}<li><a href="{{ site.communication.github_user }}">Github</a></li>{% endif %}
-		</ul>
+
+    <table width="75%" cellpadding="5" border="1">
+      <tr>
+        {% if site.communication.blog_url %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="http://blog.apiary.io/" target="_blank" title="Blog">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.blog_rss_url %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="{{ site.communication.blog_rss_url }}" target="_blank" title="Blog RSS">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.blog_atom_url %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="{{ site.communication.blog_atom_url }}" target="_blank" title="Atom Feed">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.twitter_user %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="https://twitter.com/{{ site.communication.twitter_user }}" target="_blank" title="Twitter">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png" width="50" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.linkedin_user %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="http://linkedin.com/{{ site.communication.linkedin_user }}" target="_blank" title="LinkedIn">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-linkedin.png" width="50" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.github_user %}
+          <td align="center" style="border-top: 1px solid #CCC;">
+
+              <a href="http://github.com/{{ site.communication.github_user }}" target="_blank" title="Github">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="55" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+      </tr>
+    </table>
+
 		<p>{{ site.communication.footer }}</p>
 	</div>
 </div>
