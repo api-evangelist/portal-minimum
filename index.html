@@ -26,10 +26,13 @@ layout: page
     <ul>
       {% for path in site.api.paths limit:25 %}
         {% assign path_name = path[0] %}
+        <li>-{{ path_name }}-</li>
+        {% assign path_detail = path[1] %}
+        <li>-{{ path_detail }}-</li>
         {% for verb in path_detail %}
           {% assign verb_name = verb[0] %}
           {% assign verb_detail = verb[1] %}
-          <li><a href="/documentation/#{{ post.url }}">{{ path_name }}</a> ({{ verb_name | upcase }})</li>
+          <li><a href="/documentation/#{{ post.url }}">{{ path_name }}</a> [{{ verb_name | upcase }}]</li>
         {% endfor %}
       {% endfor %}
     </ul>
