@@ -20,31 +20,15 @@ layout: none
     {% endfor %}
   ],
   "paths": {
-    {% for path in site.api.paths %}
-
-    {% assign path_name = path[0] %}
-    {% assign path_detail = path[1] %}
-
+    {% for path in site.api.paths %}{% assign path_name = path[0] %}{% assign path_detail = path[1] %}
     "{{ path_name }}": {
-
-      {% for verb in path_detail %}
-
-      {% assign verb_name = verb[0] %}
-      {% assign verb_detail = verb[1] %}
-
-      {% assign operationId = verb_detail.operationId %}
-      {% assign summary = verb_detail.summary %}
-      {% assign description = verb_detail.description %}
-
-      {% assign parameters = verb_detail.parameters %}
-
+      {% for verb in path_detail %}{% assign verb_name = verb[0] %}{% assign verb_detail = verb[1] %}{% assign operationId = verb_detail.operationId %}{% assign summary = verb_detail.summary %}{% assign description = verb_detail.description %}{% assign parameters = verb_detail.parameters %}
       "{{ verb_name }}": {
         "summary": "{{ summary }}",
         "description": "{{ description }}",
         "operationId": "{{ operationId }}",
         "consumes": [],
-        {% if verb_detail.parameters %}
-        "parameters": [
+        {% if verb_detail.parameters %}"parameters": [
           {
             "name": "{{ parameter.name }}",
             "in": "{{ parameter.in }}",
@@ -53,8 +37,7 @@ layout: none
             "type": {{ parameter.type }},
             "format": "{{ parameter.format }}"
           }{% if forloop.last == false %},{% endif %}
-        {% endif %}
-        ],
+        {% endif %}],
         "responses": {
           "200": {
             "description": "Success",
@@ -66,10 +49,8 @@ layout: none
             }
           }
         }
-      }
-      {% endfor %}
-    }
-    {% endfor %}
+      }{% endfor %}
+    }{% endfor %}
   },
   "securityDefinitions": {
     "HTTP_BASIC": {
@@ -85,30 +66,6 @@ layout: none
         "LocAddState": {
           "type": "string",
           "example": "sample LocAddState"
-        },
-        "MktName": {
-          "type": "string",
-          "example": "sample MktName"
-        },
-        "LocAddSt": {
-          "type": "string",
-          "example": "sample LocAddSt"
-        },
-        "LocAddCity": {
-          "type": "string",
-          "example": "sample LocAddCity"
-        },
-        "LocAddZip": {
-          "type": "string",
-          "example": "sample LocAddZip"
-        },
-        "x1": {
-          "type": "string",
-          "example": "sample x1"
-        },
-        "y1": {
-          "type": "string",
-          "example": "sample y1"
         }
       }
     }
