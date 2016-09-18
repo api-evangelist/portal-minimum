@@ -11,7 +11,6 @@
           <a class="navbar-brand" href="/">{{ site.portal_title }}</a>
           <ul class="nav navbar-nav">
             <li{% if page.title == site.portal_name %} class="active"{% endif %}><a href="/">Home</a></li>
-            <li{% if page.title == site.portal_name %} class="active"{% endif %}><a href="/about/">About</a></li>
             <li{% if page.title == site.getting_started.title %} class="active"{% endif %}><a href="/getting-started/">Getting Started</a></li>
             <li{% if page.title == 'Authentication' %} class="active"{% endif %}><a href="/authentication/">Auth</a></li>
             <li{% if page.title == 'Documentation' %} class="active"{% endif %}><a href="/documentation/">Docs</a></li>
@@ -47,6 +46,8 @@
         <center>
         <ul class="nav navbar-nav justified">
           <li><a href="/terms-of-service/">Terms of Service</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="http://apievangelist.com">By API Evangelist</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
         </ul>
         </center>
