@@ -115,14 +115,12 @@ title: '{{ site.documentation.title }}'
            <a name="#{{ definition_name }}"></a>
 
            <h5>{{ definition_name }}</h5>
-           --{{ definition_detail }}--<br />
-           {% for def in definition_detail %}
 
-             {% assign definition_type = def.type %}
-             {% assign definition_properties = def.properties %}
-             --{{ def }}--
+             {% assign definition_type = definition_detail.type %}
+             {% assign definition_properties = definition_detail.properties %}
+
              <!-- List All the Parameters-->
-             {% if def.properties %}
+             {% if definition_detail.properties %}
                <p><strong>Properties:</strong></p>
                <table class="table table-striped">
                  <thead>
@@ -146,7 +144,6 @@ title: '{{ site.documentation.title }}'
                </table>
              {% endif %}
 
-           {% endfor %}
          {% endfor %}
 
        </div>
