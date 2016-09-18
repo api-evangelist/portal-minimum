@@ -9,7 +9,8 @@ title: '{{ site.communication.title }}'
 		<h3>{{ site.communication.title }}</h3>
 		<p>{{ site.communication.description }}</p>
 
-    <table width="75%" cellpadding="5" border="1">
+    <center>
+    <table width="75%" cellpadding="5" border="0">
       <tr>
         {% if site.communication.blog_url %}
           <td align="center" style="border-top: 1px solid #CCC;">
@@ -60,13 +61,14 @@ title: '{{ site.communication.title }}'
           <td align="center" style="border-top: 1px solid #CCC;">
 
               <a href="http://github.com/{{ site.communication.github_user }}" target="_blank" title="Github">
-                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="55" align="center" />
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="58" align="center" />
               </a>
 
           </td>
         {% endif %}
       </tr>
     </table>
+    </center>
 
 		<p>{{ site.communication.footer }}</p>
 	</div>
