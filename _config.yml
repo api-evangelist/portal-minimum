@@ -289,7 +289,7 @@ plans:
   tiers:
     - title: Bronze
       description: The description of the plan.
-      image: http://image.jpg
+      image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg
       features:
         - Feature One
         - Feature Two
@@ -301,7 +301,7 @@ plans:
       signup_url: http://signup/url/
     - title: Gold
       description: The description of the plan.
-      image: http://image.jpg
+      image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg
       features:
         - Feature One
         - Feature Two
@@ -313,7 +313,7 @@ plans:
       signup_url: http://signup/url/
     - title: Silver
       description: The description of the plan.
-      image: http://image.jpg
+      image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg
       features:
         - Feature One
         - Feature Two
