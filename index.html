@@ -7,7 +7,7 @@ layout: page
     <a href="{{ site.portal_url }}/apis.json" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/api-commons-icon.png" width="60" align="right" title="APIs.json" style="padding-top: 70px;" /></a>
     <h3>{{ site.portal_name }}</h3>
     <p>{{ site.portal_description }}</p>
-    <p><a class="btn btn-primary btn-lg" href="/getting-started/" role="button">Getting Started &raquo;</a></p>
+    {% if site.getting_started.on == true %}<p><a class="btn btn-primary btn-lg" href="/getting-started/" role="button">Getting Started &raquo;</a></p>{% endif %}
   </div>
 </div>
 
