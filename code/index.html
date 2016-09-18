@@ -12,6 +12,7 @@ title: '{{ site.code.title }}'
 		<h3>{{ site.code.title }}</h3>
 		<p>{{ site.code.description }}</p>
 
+    <center>
     {% if site.code.sdks.php_url %}<a href="{{ site.code.sdks.php_url }}"><i class="devicon-php-plain"></i></a>{% endif %}
     {% if site.code.sdks.python_url %}<a href="{{ site.code.sdks.python_url }}"><i class="devicon-python-plain"></i></a>{% endif %}
     {% if site.code.sdks.javascript_url %}<a href="{{ site.code.sdks.javascript_url }}"><i class="devicon-javascript-plain"></i></a>{% endif %}
@@ -19,6 +20,7 @@ title: '{{ site.code.title }}'
     {% if site.code.sdks.csharp_url %}<a href="{{ site.code.sdks.csharp_url }}"><i class="devicon-csharp-plain"></i></a>{% endif %}
     {% if site.code.sdks.go_url %}<a href="{{ site.code.sdks.go_url }}"><i class="devicon-go-plain"></i></a>{% endif %}
     {% if site.code.sdks.ruby_url %}<a href="{{ site.code.sdks.ruby_url }}"><i class="devicon-ruby-plain"></i></a>{% endif %}
+    </center>
 
 		<p>{{ site.code.footer }}</p>
     </div>
