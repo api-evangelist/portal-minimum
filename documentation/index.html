@@ -91,10 +91,14 @@ title: '{{ site.documentation.title }}'
                    {% for response in responses %}
                    {% assign response_name = response[0] %}
                    {% assign response_detail = response[1] %}
+
+                   {% assign schema = response_detail.schema.items %}
+                   {% assign schema_item = schema[0] %}
+                   {% assign schema_detail = schema[1] %}
                    <tr>
                      <td>{{ response_name }}</td>
                      <td>{{ response_detail.description }}</td>
-                     <td>--{{ response_detail.schema.items }}--</td>
+                     <td>--{{ schema }}--{{ schema_item }}--{{ schema_detail }}</td>
                    </tr>
                    {% endfor %}
                  </tbody>
