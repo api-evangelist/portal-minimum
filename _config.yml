@@ -75,22 +75,22 @@ authentication:
 
 #APIs
 apis:
- - version: "1.0.0"
-   # the domain of the service
-   host: api.apievangelist.com
-   # array of all schemes that your API supports
-   schemes:
+  version: "1.0.0"
+  # the domain of the service
+  host: api.apievangelist.com
+  # array of all schemes that your API supports
+  schemes:
     - https
-    # will be prefixed to all paths
-   basePath: /v1
-   produces:
-     - text/html
-     - application/json
-     - application/xml
-     - application/hal+json
-     - application/vnd.api+json
-     - application/vnd.collection+json
-     - application/vnd.siren+json
+  # will be prefixed to all paths
+  basePath: /v1
+  produces:
+    - text/html
+    - application/json
+    - application/xml
+    - application/hal+json
+    - application/vnd.api+json
+    - application/vnd.collection+json
+   - application/vnd.siren+json
    paths:
      /products:
        get:
