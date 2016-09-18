@@ -20,8 +20,16 @@ portal_url: http://portal.minimum.apievangelist.com
 # Description - Provide a concise description of what a platform does.
 portal_description: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
 
+# Contact Information
+portal_contact_name: Kin Lane
+portal_contact_email: info@apievangelist.com
+
 #Getting Started - This section gives developers all the informaiton they will need to get started using an API.
 getting_started:
+
+  # Turn on the getting started
+  on: true
+
   # A title for the getting started section
   title: Getting Started With The API
   # A description for the getting started section.
@@ -48,6 +56,9 @@ getting_started:
 
 # Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
 authentication:
+
+  # Turn on the authentication
+  on: true
 
   # The overal authentication title & description
   title: Authentication
@@ -122,6 +133,7 @@ api:
   paths:
     /products:
      get:
+      operationId: getProducts
       summary: Products
       description: The description of the product.
       parameters:
@@ -152,6 +164,7 @@ api:
             $ref: '#/definitions/Error'
     /services:
      get:
+      operationId: getServices
       summary: Services
       description: The description of the service.
       parameters:
@@ -168,21 +181,51 @@ api:
           type: string
           format: string
       tags:
-        - Products
+        - Services
       responses:
         200:
-          description: An array of products
+          description: An array of services
           schema:
             type: array
             items:
-              $ref: '#/definitions/Product'
+              $ref: '#/definitions/Service'
         default:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
 
+  # The definitions for the APIs underlying data model
+  definitions:
+    Product:
+      type: object
+      properties:
+        product_id:
+          type: string
+          description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
+        name:
+          type: string
+          description: Name of product.
+        description:
+          type: string
+          description: Description of product.
+    Service:
+      type: object
+      properties:
+        product_id:
+          type: string
+          description: The unique id for the service.
+        name:
+          type: string
+          description: Name of service.
+        description:
+          type: string
+          description: Description of product.
+
 # Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
 code:
+
+  # Turn on the code page
+  on: true
 
   # The title and description for the code available for site.
   title: Code
@@ -207,6 +250,9 @@ code:
 
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
 communication:
+
+  # Turn on the communications page
+  on: true
 
   # The title for the platform communications page
   title: Platform Communications
@@ -233,37 +279,46 @@ communication:
 # Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
 direct_support:
 
-    # The title and description for the direct support available for site.
-    title: Direct Support
-    description: We offer a handful of direct support options so that you can contact us and get your questions answered.
-    email: info@example.com
-    phone: 555-555-5555
-    ticket_label: Add a Ticket
-    ticket_url: http://ticket.com/
-    chat_label: Chat With Us
-    chat_url: http://chat.com/
-    footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
+  # Turn on the direct support
+  on: true
+
+  # The title and description for the direct support available for site.
+  title: Direct Support
+  description: We offer a handful of direct support options so that you can contact us and get your questions answered.
+  email: info@example.com
+  phone: 555-555-5555
+  ticket_label: Add a Ticket
+  ticket_url: http://ticket.com/
+  chat_label: Chat With Us
+  chat_url: http://chat.com/
+  footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
 
 # Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
 self_service_support:
 
-    # The title and description for the self service support available for site.
-    title: Self-Service Support
-    description: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
+  # Turn on the self service support
+  on: true
 
-    github_issues_label: Submit A Github Issue
-    github_issues_url: http://github.com/issues/
+  # The title and description for the self service support available for site.
+  title: Self-Service Support
+  description: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
 
-    forum_label: Visit Our Forum
-    forum_url: http://forum.com
+  github_issues_label: Submit A Github Issue
+  github_issues_url: http://github.com/issues/
 
-    stack_exchange_label: Get Support Over At Stack Excange
-    stack_exchange_url: http://stackexchange.com
+  forum_label: Visit Our Forum
+  forum_url: http://forum.com
 
-    footer: If there is a place we should be offering support that might reach you, and other developers please let us know of where we might connect with you.
+  stack_exchange_label: Get Support Over At Stack Excange
+  stack_exchange_url: http://stackexchange.com
+
+  footer: If there is a place we should be offering support that might reach you, and other developers please let us know of where we might connect with you.
 
 # Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
 road_map:
+
+  # Turn on the road map
+  on: true
 
   # The title of the road map
   title: Road Map
@@ -294,6 +349,9 @@ road_map:
 
 # Issues - What are the current issues.
 issues:
+
+  # Turn on the issues
+  on: true
 
   # The title of the road map
   title: Issues
@@ -326,6 +384,9 @@ issues:
 
 # Change Log - Provide us consumers with a list of all changes that have been made to platform operations, don’t limit to just API changes, and include significant roadmap milestones that have been reached.
 change_log:
+
+  # Turn on the change log
+  on: true
 
   # The title of the road map
   title: Change Log

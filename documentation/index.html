@@ -20,10 +20,10 @@ title: '{{ site.documentation.title }}'
 
      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" style="margin-top: 0px; padding-top: 0px;">
 
-       <h2 style="padding-top: 0px; margin-top: 0px;">Documentation</h2>
+       <h2 style="padding-top: 0px; margin-top: 0px;">{{ documentation.title }}</h2>
        <div class="table-responsive">
 
-         {% for path in site.api.paths limit:25 %}
+         {% for path in site.api.paths %}
 
            {% assign path_name = path[0] %}
            {% assign path_detail = path[1] %}
