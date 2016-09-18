@@ -231,6 +231,7 @@ code:
   # The title and description for the code available for site.
   title: Code
   description: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png
 
   # Information about github account for the platform (either user or org)
   github_org: apievangelist
