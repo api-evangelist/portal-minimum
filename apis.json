@@ -31,7 +31,7 @@ layout: none
           "url": "{{ site.portal_url }}/change-log/"
         },
         {% endif %}
-        {% if siteroad_map.on == true %}
+        {% if site.road_map.on == true %}
         {
           "type": "X-roadmap",
           "url": "{{ site.portal_url }}/road-map/"
@@ -43,13 +43,13 @@ layout: none
           "url": "https://github.com/{{ site.code.github_user }}"
         },
         {% endif %}
-        {% if site.code.github_org == true %}
+        {% if site.code.github_org %}
         {
           "type": "X-github",
           "url": "https://github.com/{{ site.code.github_org }}"
         },
         {% endif %}
-        {% if site.self_service_support.github_issues_url == true %}
+        {% if site.self_service_support.github_issues_url %}
         {
           "type": "X-issues",
           "url": "{{ site.self_service_support.github_issues_url }}"
