@@ -18,10 +18,6 @@ title: '{{ site.plans.title }}'
       <tr>
         {% for tier in site.plans.tiers limit:5 %}
           <td align="left" style="padding: 10px;">
-
-              <a href="{{ tier.signup_url }}" target="_blank" title="Signup">
-                <img src="{{ tier.image }}" width="10%" align="left" style="padding: 5px;" />
-              </a>
               <p>
               <a href="{{ tier.signup_url }}" target="_blank" title="Signup">
                 <strong>{{ tier.title }}</strong>
