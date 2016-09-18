@@ -35,13 +35,6 @@ layout: page
     </ul>
  </div>
   <div class="col-md-4">
-    <h4>{{ site.direct_support.title }}</h4>
-    <ul>
-      {% if site.direct_support.email %}<li>email: <a href="mailto: {{ site.direct_support.email }}">{{ site.direct_support.email }}</a></li>{% endif %}
-      {% if site.direct_support.phone %}<li>phone: {{ site.direct_support.phone }}}</li>{% endif %}
-      {% if site.direct_support.ticket_url %}<li><a href="{{ site.direct_support.ticket_url }}">{{ site.direct_support.ticket_label }}</a></li>{% endif %}
-      {% if site.direct_support.chat_url %}<li><a href="{{ site.direct_support.chat_url }}">{{ site.direct_support.chat_label }}</a></li>{% endif %}
-    </ul>
     <h3>{{ site.self_service_support.title }}</h3>
     <ul>
       {% if site.self_service_support.github_issues_url %}<li><a href="{{ site.self_service_support.github_issues_url }}">{{ site.self_service_support.github_issues_label }}</a></li>{% endif %}
