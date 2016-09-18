@@ -19,7 +19,7 @@ portal_name: 'Minimum API Portal'
 portal_url: http://portal.minimum.apievangelist.com
 
 # Description - Provide a concise description of what a platform does.
-portal_description: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
+portal_descriptiactive: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
 
 # Contact Information
 portal_contact_name: Kin Lane
@@ -29,24 +29,24 @@ portal_contact_email: info@apievangelist.com
 getting_started:
 
   # Turn on the getting started
-  on: true
+  active: true
 
   # A title for the getting started section
   title: Getting Started With The API
 
   # A description for the getting started section.
-  description: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some some sample steps to get started.
+  descriptiactive: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some some sample steps to get started.
 
   # An image for the getting started section.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png
 
   # The link to signup for developer access
-  signup_on: true;
+  signup_active: true;
   signup_label: Signup
   signup_url: http://portal.minimum.apievangelist.com/signup
 
   # The link to login as developer
-  login_on: true;
+  login_active: true;
   login_label: Login
   login_url: http://portal.minimum.apievangelist.com/login
 
@@ -57,51 +57,51 @@ getting_started:
   footer: You should close up your getting started steps with some other helpful information. Depending on the other building blocks you offer as part of API operations, you can provide links to other existing resources.<br /><br />Make sure and let your users know that you are there if they need help, and to contact you with questions, or if there is anything that can done to make it easier--always be improving on the getting started process.
 
 # Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
-authentication:
+authenticatiactive:
 
   # Turn on the authentication
-  on: true
+  active: true
 
   # The overal authentication title & description
   title: Authentication
-  description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
+  descriptiactive: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-2.png
 
   # The title & description if API is open.
   open_title: Open API (Publicly Available)
-  open_description: We do not use authentication, with all API paths left open to the public.
+  open_descriptiactive: We do not use authentication, with all API paths left open to the public.
   open_url: http://example.com/open/
 
   # The title & description if API is open.
   basic_title: Basic Authentication
-  basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
+  basic_descriptiactive: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
   basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
 
   # The title & description if API is open.
   keys_title: API Keys
-  keys_description: We employ a public keys and secret key for making calls to the API, sent as headers.
+  keys_descriptiactive: We employ a public keys and secret key for making calls to the API, sent as headers.
   keys_url: http://en.wikipedia.org/wiki/Application_programming_interface_key
 
   # The title & description if API is open.
   oauth_title: OAuth
-  oauth_description: We use OAuth to secure the API, and manage access to information.
+  oauth_descriptiactive: We use OAuth to secure the API, and manage access to information.
   oauth_url: http://en.wikipedia.org/wiki/OAuth
 
   # The title & description if API is open.
   json_web_token_title: JSON Web Tokens
-  json_web_token_description: We use JSON Web Tokens to secure the API, and manage access to information.
+  json_web_token_descriptiactive: We use JSON Web Tokens to secure the API, and manage access to information.
   json_web_token_url: https://jwt.io/
 
   # The title & description if API is open.
   other_title: Custom Authentication
-  other_description: We use a custom or proprietary approach to authentication for all API calls.
+  other_descriptiactive: We use a custom or proprietary approach to authentication for all API calls.
   other_url: http://example.com/auth/
 
   # The footer for the content and page.
   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
 # Documentation
-documentation:
+documentatiactive:
 
   title: API Documentation
 
@@ -113,7 +113,7 @@ documentation:
 api:
 
   # The version for the API(s)
-  version: 1
+  versiactive: 1
 
   # the domain of the service
   host: api.example.com
@@ -141,17 +141,17 @@ api:
      get:
       operationId: getProducts
       summary: Products
-      description: The description of the product.
+      descriptiactive: The description of the product.
       parameters:
         - name: query
           in: query
-          description: The query of search.
+          descriptiactive: The query of search.
           required: false
           type: string
           format: string
         - name: page
           in: query
-          description: The page to show.
+          descriptiactive: The page to show.
           required: false
           type: string
           format: string
@@ -159,30 +159,30 @@ api:
         - Products
       responses:
         200:
-          description: An array of products
+          descriptiactive: An array of products
           schema:
             type: array
             items:
               $ref: '#/definitions/Product'
         default:
-          description: Unexpected error
+          descriptiactive: Unexpected error
           schema:
             $ref: '#/definitions/Error'
     /services:
      get:
       operationId: getServices
       summary: Services
-      description: The description of the service.
+      descriptiactive: The description of the service.
       parameters:
         - name: query
           in: query
-          description: The query of search.
+          descriptiactive: The query of search.
           required: false
           type: string
           format: string
         - name: page
           in: query
-          description: The page to show.
+          descriptiactive: The page to show.
           required: false
           type: string
           format: string
@@ -190,13 +190,13 @@ api:
         - Services
       responses:
         200:
-          description: An array of services
+          descriptiactive: An array of services
           schema:
             type: array
             items:
               $ref: '#/definitions/Service'
         default:
-          description: Unexpected error
+          descriptiactive: Unexpected error
           schema:
             $ref: '#/definitions/Error'
 
@@ -207,35 +207,35 @@ api:
       properties:
         product_id:
           type: string
-          description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
+          descriptiactive: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
         name:
           type: string
-          description: Name of product.
-        description:
+          descriptiactive: Name of product.
+        descriptiactive:
           type: string
-          description: Description of product.
+          descriptiactive: Description of product.
     Service:
       type: object
       properties:
         product_id:
           type: string
-          description: The unique id for the service.
+          descriptiactive: The unique id for the service.
         name:
           type: string
-          description: Name of service.
-        description:
+          descriptiactive: Name of service.
+        descriptiactive:
           type: string
-          description: Description of product.
+          descriptiactive: Description of product.
 
 # Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
 code:
 
   # Turn on the code page
-  on: true
+  active: true
 
   # The title and description for the code available for site.
   title: Code
-  description: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
+  descriptiactive: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png
 
   # Information about github account for the platform (either user or org)
@@ -256,10 +256,10 @@ code:
   footer: If there are specific languages or code platforms you'd like to see code available for please let us know. Sometimes it will makes sense to add a specific platform we haven't thought of.
 
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
-communication:
+communicatiactive:
 
   # Turn on the communications page
-  on: true
+  active: true
 
   # The title for the platform communications page
   title: Platform Communications
@@ -268,7 +268,7 @@ communication:
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
 
   # A description for the platform communications page
-  description: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
+  descriptiactive: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
 
   # Where do we blog?
   blog_url: http://example.com/blog/
@@ -288,13 +288,13 @@ plans:
 
   # The title and description for the plan available for site.
   title: API Plans
-  description: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access.
+  descriptiactive: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plan.png
 
   # What are the plans
   tiers:
     - title: Bronze
-      description: The description of the bronze level of API access.
+      descriptiactive: The description of the bronze level of API access.
       features:
         - Feature One
         - Feature Two
@@ -305,7 +305,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
     - title: Silver
-      description: The description of the silver level of API access.
+      descriptiactive: The description of the silver level of API access.
       features:
         - Feature One
         - Feature Two
@@ -316,7 +316,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
     - title: Gold
-      description: The description of the gold level of API access.
+      descriptiactive: The description of the gold level of API access.
       features:
         - Feature One
         - Feature Two
@@ -333,11 +333,11 @@ plans:
 direct_support:
 
   # Turn on the direct support
-  on: true
+  active: true
 
   # The title and description for the direct support available for site.
   title: Direct Support
-  description: We offer a handful of direct support options so that you can contact us and get your questions answered.
+  descriptiactive: We offer a handful of direct support options so that you can contact us and get your questions answered.
   email: info@example.com
   phone: 555-555-5555
   ticket_label: Add a Ticket
@@ -350,11 +350,11 @@ direct_support:
 self_service_support:
 
   # Turn on the self service support
-  on: true
+  active: true
 
   # The title and description for the self service support available for site.
   title: Self-Service Support
-  description: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
+  descriptiactive: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
 
   github_issues_label: Submit A Github Issue
   github_issues_url: http://github.com/issues/
@@ -371,19 +371,19 @@ self_service_support:
 updates:
 
   # Turn on updates
-  on: true;
+  active: true;
 
 # Roadmap - Give consumers a look at what is coming in the future, keeping it as a simple, forecast of the short and long term future of an API.
 road_map:
 
   # Turn on the road map
-  on: true
+  active: true
 
   # The title of the road map
   title: Road Map
 
   # The description of the road map
-  description: This is the road map for this platform, providing as much detail as possible about where we are taking the platform.
+  descriptiactive: This is the road map for this platform, providing as much detail as possible about where we are taking the platform.
 
   # Am image to show on the road map page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-roadmap.png
@@ -418,13 +418,13 @@ road_map:
 issues:
 
   # Turn on the issues
-  on: true
+  active: true
 
   # The title of the road map
   title: Issues
 
   # The description of the road map
-  description: These are the current issue for this platform, providing as much detail as possible about anything that is currently impacting things.
+  descriptiactive: These are the current issue for this platform, providing as much detail as possible about anything that is currently impacting things.
 
   # Am image to show on issues page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-issue.png
@@ -461,13 +461,13 @@ issues:
 change_log:
 
   # Turn on the change log
-  on: true
+  active: true
 
   # The title of the road map
   title: Change Log
 
   # The description of the road map
-  description: This is the change log for this platform, providing as much detail as possible about what has changed with the platform.
+  descriptiactive: This is the change log for this platform, providing as much detail as possible about what has changed with the platform.
 
   # Am image to show on change log page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-change.png
@@ -501,5 +501,5 @@ change_log:
 # Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
 legal:
 
-  terms_of_service_on: true
-  privacy_policy_on: true
+  terms_of_service_active: true
+  privacy_policy_active: true
