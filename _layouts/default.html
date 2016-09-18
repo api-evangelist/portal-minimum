@@ -14,6 +14,14 @@
             <li{% if page.title == site.getting_started.title %} class="active"{% endif %}><a href="/getting-started/">Getting Started</a></li>
             <li{% if page.title == 'Documentation' %} class="active"{% endif %}><a href="/documentation/">Documentation</a></li>
             <li{% if page.title == site.communication.title %} class="active"{% endif %}><a href="/communications/">Communications</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Updates <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/change-log/">Change Log</a></li>
+                <li><a href="/issues/">Issues</a></li>
+                <li><a href="/road-map/">Road Map</a></li>
+              </ul>
+            </li>
             <li{% if page.title == 'Support' %} class="active"{% endif %}><a href="/support/">Support</a></li>
           </ul>
         </div>
