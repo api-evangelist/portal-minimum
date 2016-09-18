@@ -289,7 +289,7 @@ plans:
 
   # The title and description for the plan available for site.
   title: API Plans
-  description: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access.
+  description: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb. Break down the packages, and details, with self-service access.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plan.png
 
   # What are the plans
@@ -328,7 +328,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
 
-  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get there.<br /><br />Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
+  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get there. Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
 
 # Support
 support:
