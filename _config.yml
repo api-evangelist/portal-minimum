@@ -141,3 +141,35 @@ communication:
   github_org: apievangelist
 
   footer: Even if an API is a side project, we can make sure and setup as well as monitor a handful of common communication channels. Successful API providers are using blogs, Twitter, and Github to efficiently manage platform communications for their APIs.
+
+# Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
+direct_support:
+
+    # The title and description for the direct support available for site.
+    title: Direct Support
+    description: We offer a handful of direct support options so that you can contact us and get your questions answered.
+    email: info@example.com
+    phone: 555-555-5555
+    ticket_label: Add a Ticket
+    ticket_url: http://ticket.com/
+    chat_label: Chat With Us
+    chat_url: http://chat.com/
+    footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
+
+# Self-Service Support - Provide self service support options via FAQ, Knowledgbases, Forums and other proven ways developers can find the answers they need, when they need.
+self_service_support:
+
+    # The title and description for the self service support available for site.
+    title: Self-Service Support
+    description: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
+
+    github_issues_label: Submit A Github Issue
+    github_issues_url: http://github.com/issues/
+
+    forum_label: Visit Our Forum
+    forum_url: http://forum.com
+
+    stack_exchange_label: Get Support Over At Stack Excange
+    stack_exchange_url: http://stackexchange.com
+
+    footer: If there is a place we should be offering support that might reach you, and other developers please let us know of where we might connect with you.

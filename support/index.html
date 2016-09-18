@@ -1,35 +1,35 @@
 ---
-layout: page
-title: API Portal Support
+layout: inner
+title: 'Support'
 ---
 
 <div class="container">
   <div class="row">
-		
-		<p><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png" align="right" width="100" style="padding: 15px;" /></p>
-		<p>Provide details about how to get support. Make sure and have several options, including direct support as well as indirect, 24/7, self-service support that users can take advantage of.</p>
 
-		<p>Here are the three possible ways::</p>
-
-		<table cellpadding="10" cellspacing="10" width="90%" align="center">
-			<tr>
-				<td align="center" valign="top" width="33%">
-					<a href="https://github.com/Kin-Lane/master/issues"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github.png" width="80" align="center"></a>
-					<a href="https://github.com/Kin-Lane/master/issues">Github Issues</a>
-				</td>
-				<td align="center" valign="top" width="33%">
-					<a href="https://twitter.com/kinlane/"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png" width="115" align="center"></a>
-					<a href="https://twitter.com/kinlane/">Twitter</a>
-				</td>
-				<td align="center" valign="top" width="33%">
-					<a href="mailto:info@kinlane.com"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-email-at.png" width="90" align="center"></a>
-					<a href="mailto:info@kinlane.com">Email</a>
-				</td>
-			</tr>
-		</table>
-		<p>Make sure and provide any additional information about what sort of time frame they can expect, and a general tone of how support is handled. Try to make things as friendly as possible, and developers will be more likey to connect.</p>
-
-		<p>Hopefully you don't have any problems, but if you do, don't hestiate to ping us.</p>
-
+    <table>
+      <tr>
+        <td valign="top" width="50%">
+      		<h3>{{ site.direct_support.title }}</h3>
+      		<p>{{ site.direct_support.description }}</p>
+      		<ul>
+      			{% if site.direct_support.email %}<li>email: <a href="mailto: {{ site.direct_support.email }}">{{ site.direct_support.email }}</a></li>{% endif %}
+      			{% if site.direct_support.phone %}<li>phone: {{ site.direct_support.phone }}}</li>{% endif %}
+      			{% if site.direct_support.ticket_url %}<li><a href="{{ site.direct_support.ticket_url }}">{{ site.direct_support.ticket_label }}</a></li>{% endif %}
+      			{% if site.direct_support.chat_url %}<li><a href="{{ site.direct_support.chat_url }}">{{ site.direct_support.chat_label }}</a></li>{% endif %}
+      		</ul>
+      		<p>{{ site.direct_support.footer }}</p>
+        </td>
+        <td valign="top" width="50%">
+      		<h3>{{ site.self_service_support.title }}</h3>
+      		<p>{{ site.self_service_support.description }}</p>
+      		<ul>
+      			<li><a href="{{ site.self_service_support.github_issues_url }}">{{ site.self_service_support.github_issues_label }}</a></li>
+            <li><a href="{{ site.self_service_support.forum_url }}">{{ site.self_service_support.forum_label }}</a></li>
+            <li><a href="{{ site.self_service_support.stack_exchange_url }}">{{ site.self_service_support.stack_exchange_label }}</a></li>
+      		</ul>
+      		<p>{{ site.direct_support.footer }}</p>
+        </td>
+      </tr>
+    </table>
 	</div>
 </div>
