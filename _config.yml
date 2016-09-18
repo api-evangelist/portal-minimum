@@ -393,6 +393,14 @@ road_map:
       date: 07/01/2016
       details: The details of the entry.
       url: http://github.com/issue/
+    - title: Road Map Entry Title
+      date: 06/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Road Map Entry Title
+      date: 05/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
 
   # Closing up the text for the page.
   footer: We try to share as much information as possible regarding where we are taking the platform, and will update on a regular basis.
@@ -428,6 +436,14 @@ issues:
       date: 07/01/2016
       details: The details of the entry.
       url: http://github.com/issue/
+    - title: Issues Entry Title
+      date: 06/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Issues Entry Title
+      date: 05/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
 
   # Closing up the text for the page.
   footer: We will try to post everything here that is currently going on, and share any problems that come up as they occur, and will take them down when resolved.
@@ -459,6 +475,14 @@ change_log:
       url: http://github.com/issue/
     - title: Change Log Entry Title
       date: 07/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Change Log Entry Title
+      date: 06/01/2016
+      details: The details of the entry.
+      url: http://github.com/issue/
+    - title: Change Log Entry Title
+      date: 05/01/2016
       details: The details of the entry.
       url: http://github.com/issue/
 

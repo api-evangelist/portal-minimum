@@ -12,7 +12,7 @@ title: '{{ site.issues.title }}'
   		{% if site.issues.image %}<img src="{{ site.issues.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
   		<h3>{{ site.issues.title }}</h3>
   		<p>{{ site.issues.description }}</p>
-      {% if site.issues.status_url %}<p><strong>Status Page:</strong> {{ site.issues.status_url }}</p>{% endif %}
+      {% if site.issues.status_url %}<p><strong>Status Page:</strong> <a href="{{ site.issues.status_url }}" target="_blank">{{ site.issues.status_url }}</a></p>{% endif %}
       <ul>
   	  {% for entry in site.issues.entries %}
         <li><a href="{{ entry.url }}">{{ entry.title }}</a> ({{ entry.date }}) - {{ entry.details }}</li>
