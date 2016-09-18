@@ -55,12 +55,12 @@ title: '{{ site.documentation.title }}'
              {% assign responses = verb_detail.responses %}
 
              <h4 style="padding-top:10px; padding-bottom:5px;">{{ summary }}</h4>
-             <pstyle="padding-top:4px; padding-bottom:4px;">{{ path_name }}</a> ({{ verb_name | upcase }})</h4>
-             <pstyle="padding-top:2px; padding-bottom:2px;">{{ description }}</p>
+             <p style="padding-top:4px; padding-bottom:4px;">{{ path_name }}</a> ({{ verb_name | upcase }})</h4>
+             <p style="padding-top:2px; padding-bottom:2px;">{{ description }}</p>
 
              <!-- List All the Parameters-->
              {% if verb_detail.parameters %}
-               <p><strong>Parameters:</strong></p>
+               <p style="padding-top:7px;"><strong>Parameters:</strong></p>
                <table class="table table-striped">
                  <thead>
                    <tr>
@@ -89,7 +89,7 @@ title: '{{ site.documentation.title }}'
 
              <!-- List All the Parameters-->
              {% if verb_detail.responses %}
-               <p><strong>Responses:</strong></p>
+               <p style="padding-top:7px;"><strong>Responses:</strong></p>
                <table class="table table-striped">
                  <thead>
                    <tr>
@@ -135,7 +135,7 @@ title: '{{ site.documentation.title }}'
 
              <!-- List All the Parameters-->
              {% if definition_detail.properties %}
-               <p><strong>Properties:</strong></p>
+               <p style="padding-top:7px;"><strong>Properties:</strong></p>
                <table class="table table-striped">
                  <thead>
                    <tr>
