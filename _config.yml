@@ -48,6 +48,7 @@ getting_started:
 
 # Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
 authentication:
+
   # The overal authentication title & description
   title: Authentication
   description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
@@ -126,14 +127,14 @@ communication:
   description: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
 
   # Where do we blog?
-  blog_url: http://apievangelist.com/blog/
-  blog_rss_url: http://apievangelist.com/blog.xml
-  blog_atom_url: http://apievangelist.com/atom.xml
+  blog_url: http://example.com/blog/
+  blog_rss_url: http://example.com/blog.xml
+  blog_atom_url: http://example.com/atom.xml
 
   twitter_user: apievangelist
   linkedin_user: apievangelist
 
-  github_user: kilane
+  github_user: kinlane
   github_org: apievangelist
 
   footer: Even if an API is a side project, we can make sure and setup as well as monitor a handful of common communication channels. Successful API providers are using blogs, Twitter, and Github to efficiently manage platform communications for their APIs.
