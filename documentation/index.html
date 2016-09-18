@@ -54,7 +54,7 @@ title: '{{ site.documentation.title }}'
              {% assign parameters = verb_detail.parameters %}
              {% assign responses = verb_detail.responses %}
 
-             <h4>{{ summary }}</h4>
+             <h4 style="padding-top:5px; padding-bottom:5px;">{{ summary }}</h4>
              <p>{{ path_name }}</a> ({{ verb_name | upcase }})</h4>
              <p>{{ description }}</p>
 
@@ -109,7 +109,7 @@ title: '{{ site.documentation.title }}'
                    <tr>
                      <td>{{ response_name }}</td>
                      <td>{{ response_detail.description }}</td>
-                     <td><a href="index.html#definition-{{ schema_clean }}"{{ schema_clean }}</td>
+                     <td><a href="index.html#definition-{{ schema_clean }}">{{ schema_clean }}</td>
                    </tr>
                    {% endfor %}
                  </tbody>
@@ -128,7 +128,7 @@ title: '{{ site.documentation.title }}'
            {% assign definition_detail = definition[1] %}
 
            <a name="#definition-{{ definition_name }}"></a>
-           <h4>{{ definition_name }}</h4>
+           <h4 style="padding-top:5px; padding-bottom:5px;">{{ definition_name }}</h4>
 
              {% assign definition_type = definition_detail.type %}
              {% assign definition_properties = definition_detail.properties %}
