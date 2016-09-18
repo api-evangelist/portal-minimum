@@ -6,6 +6,8 @@ title: '{{ site.code.title }}'
 <div class="container">
   <div class="row">
 
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
 		{% if site.code.image %}<img src="{{ site.code.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
 		<h3>{{ site.code.title }}</h3>
 		<p>{{ site.code.description }}</p>
@@ -19,5 +21,8 @@ title: '{{ site.code.title }}'
     {% if site.code.sdks.ruby_url %}<a href="{{ site.code.sdks.ruby_url }}"><i class="devicon-ruby-plain"></i></a>{% endif %}
 
 		<p>{{ site.code.footer }}</p>
+    </div>
+    <div class="col-md-2"></div>
+
 	</div>
 </div>
