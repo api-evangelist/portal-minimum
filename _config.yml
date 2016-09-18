@@ -87,6 +87,11 @@ authentication:
   # The footer for the content and page.
   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
+# Documentation
+documentation:
+
+  title: API Documentation
+
 # Listing of all the APIs
 api:
 
