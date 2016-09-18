@@ -16,31 +16,31 @@ title: '{{ site.plans.title }}'
     <center>
     <table border="0" style="border: 0px; width: 75%; margin-top: 25px; margin-bottom: 25px;">
       <tr>
-        {% for plan in site.plans limit:5 %}
+        {% for tier in site.plans.tiers limit:5 %}
           <td align="center">
 
-              <a href="{{ plan.signup_url }}" target="_blank" title="Signup">
-                <img src="{{ plan.image }}" width="20%" align="right" />
+              <a href="{{ tier.signup_url }}" target="_blank" title="Signup">
+                <img src="{{ tier.image }}" width="20%" align="right" />
               </a>
               <p>
-              <a href="{{ plan.signup_url }}" target="_blank" title="Signup">
-                <strong>{{ plan.title }}</strong>
+              <a href="{{ tier.signup_url }}" target="_blank" title="Signup">
+                <strong>{{ tier.title }}</strong>
               </a>
               <br />
-              {{ plan.description }}
+              {{ tier.description }}
               </p>
-                {% if plan.features %}
+                {% if tier.features %}
                   <p><strong>Features</strong></p>
                   <ul>
-                    {% for feature in plan.features %}
+                    {% for feature in tier.features %}
                       <li>{{ feature }}</li>
                     {% endfor %}
                   </ul>
                 {% endif %}
-                {% if plan.limits %}
+                {% if tier.limits %}
                   <p><strong>Limits</strong></p>
                   <ul>
-                    {% for limit in plan.limits %}
+                    {% for limit in tier.limits %}
                       <li>{{ limit }}</li>
                     {% endfor %}
                   </ul>
