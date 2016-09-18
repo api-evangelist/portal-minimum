@@ -36,6 +36,7 @@ title: '{{ site.documentation.title }}'
          {% for path in site.api.paths %}
 
            {% assign path_name = path[0] %}
+           {% assign path_name_clean = path_name | replace: '/', '' %}
            {% assign path_detail = path[1] %}
 
            <a name="#path-{{ path_name }}"></a>
