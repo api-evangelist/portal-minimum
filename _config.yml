@@ -124,6 +124,29 @@ api:
       summary: Services
       description: The description of the service.
 
+# Code - Provide consumers with code, whether they are samples, libraries, or full blown Software Development Kits (SDKs) and Platform Development Kits (PDK). Make sure as many possible languages are provided, not just the languages you use.
+code:
+  # The title and description for the code available for site.
+  title: Code
+  description: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
+
+  # Information about github account for the platform (either user or org)
+  github_org: apievangelist
+  github_user: kinlane
+
+  # What full SDKs are available
+  sdks:
+    php_url: http://example.com/php/
+    python_url: http://example.com/python/
+    javascript_url: http://example.com/javascript/
+    java_url: http://example.com/java/
+    csharp_url: http://example.com/csharp/
+    go_url: http://example.com/go/
+    ruby_url: http://example.com/ruby/
+
+  # The closing text for the code page.
+  footer: If there are specific languages or code platforms you'd like to see code available for please let us know.
+
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
 communication:
 

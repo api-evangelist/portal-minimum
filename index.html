@@ -48,13 +48,13 @@ layout: page
   <div class="row">
     <center>
       <div class="col-md-12">
-        <a href=""><i class="devicon-php-plain"></i></a>
-        <a href=""><i class="devicon-python-plain"></i></a>
-        <a href=""><i class="devicon-javascript-plain"></i></a>
-        <a href=""><i class="devicon-java-plain"></i></a>
-        <a href=""><i class="devicon-csharp-plain"></i></a>
-        <a href=""><i class="devicon-go-plain"></i></a>
-        <a href=""><i class="devicon-ruby-plain"></i></a>
+        {% if site.code.sdks.php_url %}<a href="{{ site.code.sdks.php_url }}"><i class="devicon-php-plain"></i></a>{% endif %}
+        {% if site.code.sdks.python_url %}<a href="{{ site.code.sdks.python_url }}"><i class="devicon-python-plain"></i></a>{% endif %}
+        {% if site.code.sdks.javascript_url %}<a href="{{ site.code.sdks.javascript_url }}"><i class="devicon-javascript-plain"></i></a>{% endif %}
+        {% if site.code.sdks.java_url %}<a href="{{ site.code.sdks.java_url }}"><i class="devicon-java-plain"></i></a>{% endif %}
+        {% if site.code.sdks.csharp_url %}<a href="{{ site.code.sdks.csharp_url }}"><i class="devicon-csharp-plain"></i></a>{% endif %}
+        {% if site.code.sdks.go_url %}<a href="{{ site.code.sdks.go_url }}"><i class="devicon-go-plain"></i></a>{% endif %}
+        {% if site.code.sdks.ruby_url %}<a href="{{ site.code.sdks.ruby_url }}"><i class="devicon-ruby-plain"></i></a>{% endif %}
       </div>
     </center>
   </div>

@@ -1,10 +1,23 @@
 ---
-layout: page
-title: Code
+layout: inner
+title: '{{ site.code.title }}'
 ---
 
-<p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-tools.png" align="right" width="120" style="padding: 15px;" /></p>
+<div class="container">
+  <div class="row">
 
-<p>This is an aggregation of all the code libraries across the APIs available in my master stack. I haven't generated all the libraries, but will do as I have time. I used Swagger Codegen, via my <a href="http://api-codegen.apievangelist.com/">APIs.json Codegen</a> to generate these libraries.</p>
+		{% if site.code.image %}<img src="{{ site.code.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+		<h3>{{ site.code.title }}</h3>
+		<p>{{ site.code.description }}</p>
 
-<table align="center" id="code-page" width="100%"></table>
+    {% if site.code.sdks.php_url %}<a href="{{ site.code.sdks.php_url }}"><i class="devicon-php-plain"></i></a>{% endif %}
+    {% if site.code.sdks.python_url %}<a href="{{ site.code.sdks.python_url }}"><i class="devicon-python-plain"></i></a>{% endif %}
+    {% if site.code.sdks.javascript_url %}<a href="{{ site.code.sdks.javascript_url }}"><i class="devicon-javascript-plain"></i></a>{% endif %}
+    {% if site.code.sdks.java_url %}<a href="{{ site.code.sdks.java_url }}"><i class="devicon-java-plain"></i></a>{% endif %}
+    {% if site.code.sdks.csharp_url %}<a href="{{ site.code.sdks.csharp_url }}"><i class="devicon-csharp-plain"></i></a>{% endif %}
+    {% if site.code.sdks.go_url %}<a href="{{ site.code.sdks.go_url }}"><i class="devicon-go-plain"></i></a>{% endif %}
+    {% if site.code.sdks.ruby_url %}<a href="{{ site.code.sdks.ruby_url }}"><i class="devicon-ruby-plain"></i></a>{% endif %}
+
+		<p>{{ site.code.footer }}</p>
+	</div>
+</div>

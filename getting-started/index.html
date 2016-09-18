@@ -5,16 +5,16 @@ title: '{{ site.getting_started.title }}'
 
 <div class="container">
   <div class="row">
-		<img src="{{ site.getting_started.image }}" align="right" width="15%" style="padding: 15px;" />
+		{% if site.getting_started.image %}<img src="{{ site.getting_started.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
 		<h3>{{ site.getting_started.title }}</h3>
 		<p>{{ site.getting_started.description }}</p>
 
 		<ol>
-			<li><a href="{{ site.getting_started.signup_url }}">{{ site.getting_started.signup_label }}</a></li>
-			<li><a href="{{ site.getting_started.create_app_url }}">{{ site.getting_started.create_app_label }}</a></li>
-			<li><a href="{{ site.getting_started.documentation_url }}">{{ site.getting_started.documentation_label }}</a></li>
-			<li><a href="/documentation/">Visit our code page, and download the language library you need</li>
-			<li><a href="/support/">Visit The Support Page If You Have Questions</a></li>
+			{% if site.getting_started.signup_url %}<li><a href="{{ site.getting_started.signup_url }}">{{ site.getting_started.signup_label }}</a></li>% endif %}
+			{% if site.getting_started.create_app_url %}<li><a href="{{ site.getting_started.create_app_url }}">{{ site.getting_started.create_app_label }}</a></li>% endif %}
+			{% if site.getting_started.documentation_url %}<li><a href="{{ site.getting_started.documentation_url }}">{{ site.getting_started.documentation_label }}</a></li>% endif %}
+			{% if site.getting_started.image %}<li><a href="/documentation/">Visit our code page, and download the language library you need</li>% endif %}
+			{% if site.getting_started.image %}<li><a href="/support/">Visit The Support Page If You Have Questions</a></li>% endif %}
 		</ol>
 
 		<p>{{ site.getting_started.footer }}</p>
