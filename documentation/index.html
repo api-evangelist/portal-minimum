@@ -9,24 +9,24 @@ title: '{{ site.documentation.title }}'
      <div class="col-sm-3 col-md-2 sidebar">
 
        <p><strong>Paths:</strong></p>
-       <ul class="nav nav-sidebar">
+       <ul class="nav nav-sidebar" style="padding-left: 10px;">
          <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
          {% for path in site.api.paths limit:25 %}
            {% assign path_name = path[0] %}
            {% assign clean_path_name = path_name | downcase %}
            {% assign clean_path_name = clean_path_name | replace: '/', '' %}
-             <li><a href="/documentation/index.html#path-{{ clean_path_name }}"><strong>{{ path_name }}</strong></a></li>
+             <li><a href="/documentation/index.html#path-{{ clean_path_name }}">{{ path_name }}</a></li>
          {% endfor %}
        </ul>
 
        <p><strong>Definitions:</strong></p>
-       <ul class="nav nav-sidebar">
+       <ul class="nav nav-sidebar" style="padding-left: 10px;">
          {% for definition in site.api.definitions %}
 
            {% assign definition_name = definition[0] %}
            {% assign clean_definition_name = definition_name | downcase %}
            {% assign clean_definition_name = clean_definition_name | replace: '/', '' %}
-          <li><a href="/documentation/index.html#definition-{{ clean_definition_name }}"><strong>{{ definition_name }}</strong></a></li>
+          <li><a href="/documentation/index.html#definition-{{ clean_definition_name }}">{{ definition_name }}</a></li>
          {% endfor %}
        </ul>
 
