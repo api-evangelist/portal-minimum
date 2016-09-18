@@ -14,10 +14,8 @@ layout: none
   },
   "host": "{{ site.api.host }}",
   "basePath": "{{ site.api.basePath }}",
-  "schemes": [
-    {% for scheme in site.api.schemes %}
-    "{{ scheme }}"{% if forloop.last == false %},{% endif %}
-    {% endfor %}
+  "schemes": [  {% for scheme in site.api.schemes %}
+    "{{ scheme }}"{% if forloop.last == false %},{% endif %}{% endfor %}
   ],
   "paths": {
     {% for path in site.api.paths %}{% assign path_name = path[0] %}{% assign path_detail = path[1] %}
