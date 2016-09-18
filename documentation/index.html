@@ -102,12 +102,12 @@ title: '{{ site.documentation.title }}'
                    {% assign response_detail = response[1] %}
 
                    {% assign schema = response_detail.schema.items %}
-                   {% assign schema_item = schema[0] %}
-                   {% assign schema_detail = schema[1] %}
+                   {% assign schema_clean = schema | replace: '{"$ref"=>"#/definitions/', '' %}
+                   {% assign schema_clean = schema_clean | replace: '"}', '' %}
                    <tr>
                      <td>{{ response_name }}</td>
                      <td>{{ response_detail.description }}</td>
-                     <td>{{ schema }} into {{ schema_item }} hopefully {{ schema_detail }}</td>
+                     <td>{{ schema_clean }}</td>
                    </tr>
                    {% endfor %}
                  </tbody>
