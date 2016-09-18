@@ -1,18 +1,83 @@
 ---
-layout: page
-title: Pricing
+layout: inner
+title: '{{ site.communication.title }}'
 ---
 
-<p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg" align="right" width="150" style="padding: 15px;" /></p></p>
-<p>Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.</p>
-<p>Break down the packages, and details, with self-service access:</p>
+<div class="container">
+  <div class="row">
 
-<ul>
-<li>Retail - Free API calls up to 500 per day, then $0.005 USD per API call.</li>
-<li>Pro - Free API calls up to 500 per day, then $0.001 USD per API call.</li>
-<li>Partner - Custom levels of access, just let me know, and I will consider.</li>
-<li>Wholesale - Deploy any of my API designs in private infrastructure.</li>
-</ul>
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
 
-<p>Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get ther.</p>
-<p>Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.</p>
+		{% if site.communication.image %}<img src="{{ site.communication.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+		<h3>{{ site.communication.title }}</h3>
+		<p>{{ site.communication.description }}</p>
+
+    <center>
+    <table border="0" style="border: 0px; width: 75%; margin-top: 25px; margin-bottom: 25px;">
+      <tr>
+        {% if site.communication.blog_url %}
+          <td align="center"  >
+
+              <a href="{{ site.communication.blog_url }}" target="_blank" title="Blog">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.blog_rss_url %}
+          <td align="center"  >
+
+              <a href="{{ site.communication.blog_rss_url }}" target="_blank" title="Blog RSS">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.blog_atom_url %}
+          <td align="center"  >
+
+              <a href="{{ site.communication.blog_atom_url }}" target="_blank" title="Atom Feed">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" width="43" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.twitter_user %}
+          <td align="center"  >
+
+              <a href="https://twitter.com/{{ site.communication.twitter_user }}" target="_blank" title="Twitter">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png" width="50" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.linkedin_user %}
+          <td align="center"  >
+
+              <a href="http://linkedin.com/{{ site.communication.linkedin_user }}" target="_blank" title="LinkedIn">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-linkedin.png" width="45" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+        {% if site.communication.github_user %}
+          <td align="center"  >
+
+              <a href="http://github.com/{{ site.communication.github_user }}" target="_blank" title="Github">
+                <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="61" align="center" />
+              </a>
+
+          </td>
+        {% endif %}
+      </tr>
+    </table>
+    </center>
+
+		<p>{{ site.communication.footer }}</p>
+
+  </div>
+  <div class="col-md-1"></div>
+
+	</div>
+</div>

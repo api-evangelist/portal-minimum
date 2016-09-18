@@ -1,0 +1,60 @@
+---
+layout: inner
+title: '{{ site.plans.title }}'
+---
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+
+		{% if site.plans.image %}<img src="{{ site.plans.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+		<h3>{{ site.plans.title }}</h3>
+		<p>{{ site.plans.description }}</p>
+
+    <center>
+    <table border="0" style="border: 0px; width: 75%; margin-top: 25px; margin-bottom: 25px;">
+      <tr>
+        {% for plan in site.plans limit:5 %}
+          <td align="center">
+
+              <a href="{{ plan.signup_url }}" target="_blank" title="Signup">
+                <img src="{{ plan.image }}" width="20%" align="right" />
+              </a>
+              <p>
+              <a href="{{ plan.signup_url }}" target="_blank" title="Signup">
+                <strong>{{ plan.title }}</strong>
+              </a>
+              <br />
+              {{ plan.description }}
+              </p>
+                {% if plan.features %}
+                  <p><strong>Features</strong></p>
+                  <ul>
+                    {% for feature in plan.features %}
+                      <li>{{ feature }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {% if plan.limits %}
+                  <p><strong>Limits</strong></p>
+                  <ul>
+                    {% for limit in plan.limits %}
+                      <li>{{ limit }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+    </table>
+    </center>
+
+		<p>{{ site.plans.footer }}</p>
+
+  </div>
+  <div class="col-md-1"></div>
+
+	</div>
+</div>

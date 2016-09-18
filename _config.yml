@@ -276,6 +276,55 @@ communication:
 
   footer: Even if an API is a side project, we can make sure and setup as well as monitor a handful of common communication channels. Successful API providers are using blogs, Twitter, and Github to efficiently manage platform communications for their APIs.
 
+# Pricing - Even if an API is free, provide an overview of how the platform makes it money, and generates value — enough to keep it up and running, so I know, as an API consumer I can depend on. Let me know all pricing levels, and provide insight into other partner opportunities.
+plans:
+
+  # The title and description for the plan available for site.
+  title: API Plans
+  description: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access:
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg
+
+  # What are the plans
+  tiers:
+    - title: Bronze
+      description: The description of the plan.
+      image: http://image.jpg
+      features:
+        - Feature One
+        - Feature Two
+        - Feature Three
+      limits:
+        - Limit One
+        - Limit Two
+        - Limit Three
+      signup_url: http://signup/url/
+    - title: Gold
+      description: The description of the plan.
+      image: http://image.jpg
+      features:
+        - Feature One
+        - Feature Two
+        - Feature Three
+      limits:
+        - Limit One
+        - Limit Two
+        - Limit Three
+      signup_url: http://signup/url/
+    - title: Silver
+      description: The description of the plan.
+      image: http://image.jpg
+      features:
+        - Feature One
+        - Feature Two
+        - Feature Three
+      limits:
+        - Limit One
+        - Limit Two
+        - Limit Three
+      signup_url: http://signup/url/
+
+  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get ther.<br /><br />Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
+
 # Direct Support - Give API consumers a way to reach you via email, ticketing system, chat, or good ol fashioned phone.
 direct_support:
 
