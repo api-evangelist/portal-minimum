@@ -57,6 +57,7 @@ title: '{{ site.documentation.title }}'
                    {% for parameter in parameters %}
                    <tr>
                      <td>{{ parameter.name }}</td>
+                     <td>{{ parameter.in }}</td>
                      <td>{{ parameter.description }}</td>
                      <td>{{ parameter.required }}</td>
                      <td>{{ parameter.type }}</td>
