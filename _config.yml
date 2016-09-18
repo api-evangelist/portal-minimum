@@ -34,7 +34,7 @@ getting_started:
   title: Getting Started With The API
 
   # A description for the getting started section.
-  descriptiactive: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some some sample steps to get started.
+  description: Getting started should cover everything developers will need to get up and running with an API. After finishing your API, and you think it is ready for prime time, grab someone who knows nothing about the API, and watch them try to use it. Use what you learn to craft a simple opening paragraph, then some steps users can follow.<br /><br />Here are some some sample steps to get started.
 
   # An image for the getting started section.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png
@@ -56,51 +56,51 @@ getting_started:
   footer: You should close up your getting started steps with some other helpful information. Depending on the other building blocks you offer as part of API operations, you can provide links to other existing resources.<br /><br />Make sure and let your users know that you are there if they need help, and to contact you with questions, or if there is anything that can done to make it easier--always be improving on the getting started process.
 
 # Authentication
-authenticatiactive:
+authentication:
 
   # Turn on the authentication
   active: true
 
   # The overal authentication title & description
   title: Authentication
-  descriptiactive: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
+  description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-2.png
 
   # The title & description if API is open.
   open_title: Open API (Publicly Available)
-  open_descriptiactive: We do not use authentication, with all API paths left open to the public.
+  open_description: We do not use authentication, with all API paths left open to the public.
   open_url: http://example.com/open/
 
   # The title & description if API is open.
   basic_title: Basic Authentication
-  basic_descriptiactive: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
+  basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
   basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
 
   # The title & description if API is open.
   keys_title: API Keys
-  keys_descriptiactive: We employ a public keys and secret key for making calls to the API, sent as headers.
+  keys_description: We employ a public keys and secret key for making calls to the API, sent as headers.
   keys_url: http://en.wikipedia.org/wiki/Application_programming_interface_key
 
   # The title & description if API is open.
   oauth_title: OAuth
-  oauth_descriptiactive: We use OAuth to secure the API, and manage access to information.
+  oauth_description: We use OAuth to secure the API, and manage access to information.
   oauth_url: http://en.wikipedia.org/wiki/OAuth
 
   # The title & description if API is open.
   json_web_token_title: JSON Web Tokens
-  json_web_token_descriptiactive: We use JSON Web Tokens to secure the API, and manage access to information.
+  json_web_token_description: We use JSON Web Tokens to secure the API, and manage access to information.
   json_web_token_url: https://jwt.io/
 
   # The title & description if API is open.
   other_title: Custom Authentication
-  other_descriptiactive: We use a custom or proprietary approach to authentication for all API calls.
+  other_description: We use a custom or proprietary approach to authentication for all API calls.
   other_url: http://example.com/auth/
 
   # The footer for the content and page.
   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
 # Documentation
-documentatiactive:
+documentation:
 
   title: API Documentation
 
@@ -112,7 +112,7 @@ documentatiactive:
 api:
 
   # The version for the API(s)
-  versiactive: 1
+  version: 1
 
   # the domain of the service
   host: api.example.com
@@ -140,17 +140,17 @@ api:
      get:
       operationId: getProducts
       summary: Products
-      descriptiactive: The description of the product.
+      description: The description of the product.
       parameters:
         - name: query
           in: query
-          descriptiactive: The query of search.
+          description: The query of search.
           required: false
           type: string
           format: string
         - name: page
           in: query
-          descriptiactive: The page to show.
+          description: The page to show.
           required: false
           type: string
           format: string
@@ -158,30 +158,30 @@ api:
         - Products
       responses:
         200:
-          descriptiactive: An array of products
+          description: An array of products
           schema:
             type: array
             items:
               $ref: '#/definitions/Product'
         default:
-          descriptiactive: Unexpected error
+          description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
     /services:
      get:
       operationId: getServices
       summary: Services
-      descriptiactive: The description of the service.
+      description: The description of the service.
       parameters:
         - name: query
           in: query
-          descriptiactive: The query of search.
+          description: The query of search.
           required: false
           type: string
           format: string
         - name: page
           in: query
-          descriptiactive: The page to show.
+          description: The page to show.
           required: false
           type: string
           format: string
@@ -189,13 +189,13 @@ api:
         - Services
       responses:
         200:
-          descriptiactive: An array of services
+          description: An array of services
           schema:
             type: array
             items:
               $ref: '#/definitions/Service'
         default:
-          descriptiactive: Unexpected error
+          description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
 
@@ -206,25 +206,25 @@ api:
       properties:
         product_id:
           type: string
-          descriptiactive: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
+          description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
         name:
           type: string
-          descriptiactive: Name of product.
-        descriptiactive:
+          description: Name of product.
+        description:
           type: string
-          descriptiactive: Description of product.
+          description: Description of product.
     Service:
       type: object
       properties:
         product_id:
           type: string
-          descriptiactive: The unique id for the service.
+          description: The unique id for the service.
         name:
           type: string
-          descriptiactive: Name of service.
-        descriptiactive:
+          description: Name of service.
+        description:
           type: string
-          descriptiactive: Description of product.
+          description: Description of product.
 
 # Code
 code:
@@ -234,7 +234,7 @@ code:
 
   # The title and description for the code available for site.
   title: Code
-  descriptiactive: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
+  description: This is the page where we showcase all the code available for integration with the API. We have tried to provide as many possible language libraries as we possibly can.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png
 
   # Information about github account for the platform (either user or org)
@@ -267,7 +267,7 @@ communication:
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
 
   # A description for the platform communications page
-  descriptiactive: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
+  description: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
 
   # Where do we blog?
   blog_url: http://example.com/blog/
@@ -289,13 +289,13 @@ plans:
 
   # The title and description for the plan available for site.
   title: API Plans
-  descriptiactive: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access.
+  description: Provide simple, clear information about what an API costs. Break down pricing into packages, and units of value, and provide several tiers of access, with levels that are easy to climb.<br /><br />Break down the packages, and details, with self-service access.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plan.png
 
   # What are the plans
   tiers:
     - title: Bronze
-      descriptiactive: The description of the bronze level of API access.
+      description: The description of the bronze level of API access.
       features:
         - Feature One
         - Feature Two
@@ -306,7 +306,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
     - title: Silver
-      descriptiactive: The description of the silver level of API access.
+      description: The description of the silver level of API access.
       features:
         - Feature One
         - Feature Two
@@ -317,7 +317,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
     - title: Gold
-      descriptiactive: The description of the gold level of API access.
+      description: The description of the gold level of API access.
       features:
         - Feature One
         - Feature Two
@@ -344,13 +344,21 @@ direct_support:
 
   # The title and description for the direct support available for site.
   title: Direct Support
-  descriptiactive: We offer a handful of direct support options so that you can contact us and get your questions answered.
+  description: We offer a handful of direct support options so that you can contact us and get your questions answered.
+
+  # General Support
   email: info@example.com
   phone: 555-555-5555
+
+  #Ticket System
   ticket_label: Add a Ticket
   ticket_url: http://ticket.com/
+
+  #Chat System
   chat_label: Chat With Us
   chat_url: http://chat.com/
+
+  #close up the page content
   footer: If there is a better way in which you'd like to be able to contact us please let us know using one of the channels above.
 
 # Self-Service Support
@@ -361,14 +369,17 @@ self_service_support:
 
   # The title and description for the self service support available for site.
   title: Self-Service Support
-  descriptiactive: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
+  description: We also provide a handful of self-service support options where you might be able to get your questions answered quicker than direct channels.
 
+  #Github Issues
   github_issues_label: Submit A Github Issue
   github_issues_url: http://github.com/issues/
 
+  #Forum
   forum_label: Visit Our Forum
   forum_url: http://forum.com
 
+  #Stack Exchange
   stack_exchange_label: Get Support Over At Stack Excange
   stack_exchange_url: http://stackexchange.com
 
@@ -390,7 +401,7 @@ road_map:
   title: Road Map
 
   # The description of the road map
-  descriptiactive: This is the road map for this platform, providing as much detail as possible about where we are taking the platform.
+  description: This is the road map for this platform, providing as much detail as possible about where we are taking the platform.
 
   # Am image to show on the road map page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-roadmap.png
@@ -431,7 +442,7 @@ issues:
   title: Issues
 
   # The description of the road map
-  descriptiactive: These are the current issue for this platform, providing as much detail as possible about anything that is currently impacting things.
+  description: These are the current issue for this platform, providing as much detail as possible about anything that is currently impacting things.
 
   # Am image to show on issues page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-issue.png
@@ -474,7 +485,7 @@ change_log:
   title: Change Log
 
   # The description of the road map
-  descriptiactive: This is the change log for this platform, providing as much detail as possible about what has changed with the platform.
+  description: This is the change log for this platform, providing as much detail as possible about what has changed with the platform.
 
   # Am image to show on change log page
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-change.png
