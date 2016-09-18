@@ -136,13 +136,13 @@ title: '{{ site.documentation.title }}'
                  </thead>
                  <tbody>
                    {% for property in definition_properties %}
-                   {% assign property_name = property[0] %}
-                   {% assign property_details = property[1] %}
-                   <tr>
-                     <td>{{ property_names }}</td>
-                     <td>{{ property_details.type }}</td>
-                     <td>{{ property_details.description }}</td>
-                   </tr>
+                     {% assign property_name = property[0] %}
+                     {% assign property_details = property[1] %}
+                     <tr>
+                       <td>{{ property_name }}</td>
+                       <td>{{ property_details.type }}</td>
+                       <td>{{ property_details.description }}</td>
+                     </tr>
                    {% endfor %}
                  </tbody>
                </table>
