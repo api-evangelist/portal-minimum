@@ -25,6 +25,36 @@ layout: none
           "type": "X-blog-rss-feed",
           "url": "{{ site.portal_url }}/blog.xml"
         },
+        {% if site.getting_started.on == true %}
+        {
+          "type": "X-getting-started",
+          "url": "{{ site.portal_url }}/getting-started/"
+        },
+        {% endif %}
+        {% if site.authentication.on == true %}
+        {
+          "type": "X-authentication",
+          "url": "{{ site.portal_url }}/authentication/"
+        },
+        {% endif %}
+        {% if site.code.on == true %}
+        {
+          "type": "X-code",
+          "url": "{{ site.portal_url }}/code/"
+        },
+        {% endif %}
+        {% if site.direct_support.on == true %}
+        {
+          "type": "X-direct-support",
+          "url": "{{ site.portal_url }}/support/"
+        },
+        {% endif %}
+        {% if site.self_service_support.on == true %}
+        {
+          "type": "X-self-service-support",
+          "url": "{{ site.portal_url }}/support/"
+        },
+        {% endif %}
         {% if site.change_log.on == true %}
         {
           "type": "X-change-log",
@@ -36,6 +66,12 @@ layout: none
           "type": "X-roadmap",
           "url": "{{ site.portal_url }}/road-map/"
         },
+        {% endif %}
+        {% if site.self_service_support.github_issues_url %}
+        {
+          "type": "X-issues",
+          "url": "{{ site.self_service_support.github_issues_url }}"
+        }
         {% endif %}
         {% if site.code.github_user == true %}
         {
@@ -49,11 +85,17 @@ layout: none
           "url": "https://github.com/{{ site.code.github_org }}"
         },
         {% endif %}
-        {% if site.self_service_support.github_issues_url %}
+        {% if site.terms_of_service_on.on == true %}
         {
-          "type": "X-issues",
-          "url": "{{ site.self_service_support.github_issues_url }}"
-        }
+          "type": "X-terms-of-service",
+          "url": "{{ site.portal_url }}/terms-of-service/"
+        },
+        {% endif %}
+        {% if site.privacy_policy_on.on == true %}
+        {
+          "type": "X-code",
+          "url": "{{ site.portal_url }}/privacy-policy/"
+        },
         {% endif %}
         {
           "type": "X-openapi-spec",

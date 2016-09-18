@@ -414,3 +414,9 @@ change_log:
 
   # Closing up the text for the page.
   footer: We try to share as much information as possible regarding where what has changed with the platform, and updating on a regular basis.
+
+# Terms of Service - Provide, easy to find, and understand terms of service for platform operations, helping API consumers understand what they are in for.
+legal:
+
+  terms_of_service_on: true
+  privacy_policy_on: true
