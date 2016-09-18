@@ -6,7 +6,7 @@ title: '{{ site.communication.title }}'
 <div class="container">
   <div class="row">
 
-		<img src="{{ site.communication.image }}" align="right" width="25%" style="padding: 15px;" />
+		{% if site.communication.image %}<img src="{{ site.communication.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
 		<h3>{{ site.communication.title }}</h3>
 		<p>{{ site.communication.description }}</p>
 
@@ -14,7 +14,7 @@ title: '{{ site.communication.title }}'
     <table border="0" style="border: 0px; width: 75%; margin-top: 10px; margin-bottom: 10px;">
       <tr>
         {% if site.communication.blog_url %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="{{ site.communication.blog_url }}" target="_blank" title="Blog">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png" width="43" align="center" />
@@ -23,7 +23,7 @@ title: '{{ site.communication.title }}'
           </td>
         {% endif %}
         {% if site.communication.blog_rss_url %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="{{ site.communication.blog_rss_url }}" target="_blank" title="Blog RSS">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="43" align="center" />
@@ -32,7 +32,7 @@ title: '{{ site.communication.title }}'
           </td>
         {% endif %}
         {% if site.communication.blog_atom_url %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="{{ site.communication.blog_atom_url }}" target="_blank" title="Atom Feed">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" width="43" align="center" />
@@ -41,7 +41,7 @@ title: '{{ site.communication.title }}'
           </td>
         {% endif %}
         {% if site.communication.twitter_user %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="https://twitter.com/{{ site.communication.twitter_user }}" target="_blank" title="Twitter">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png" width="50" align="center" />
@@ -50,7 +50,7 @@ title: '{{ site.communication.title }}'
           </td>
         {% endif %}
         {% if site.communication.linkedin_user %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="http://linkedin.com/{{ site.communication.linkedin_user }}" target="_blank" title="LinkedIn">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-linkedin.png" width="47" align="center" />
@@ -59,7 +59,7 @@ title: '{{ site.communication.title }}'
           </td>
         {% endif %}
         {% if site.communication.github_user %}
-          <td align="center" style="border-top: 1px solid #CCC;">
+          <td align="center"  >
 
               <a href="http://github.com/{{ site.communication.github_user }}" target="_blank" title="Github">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="58" align="center" />
