@@ -16,7 +16,7 @@ title: '{{ site.documentation.title }}'
            {% for verb in path_detail %}
              {% assign verb_name = verb[0] %}
              {% assign verb_detail = verb[1] %}
-             <li><a href="/documentation/#{{ post.url }}">{{ path_name }}</a> ({{ verb_name | upcase }})</li>
+             <li><a href="/documentation/index.html#{{ path_name }}">{{ path_name }}</a> ({{ verb_name | upcase }})</li>
            {% endfor %}
          {% endfor %}
        </ul>
@@ -34,8 +34,12 @@ title: '{{ site.documentation.title }}'
            {% for verb in path_detail %}
              {% assign verb_name = verb[0] %}
              {% assign verb_detail = verb[1] %}
-             <h3><a name="#{{ post.url }}">{{ path_name }}</a> ({{ verb_name | upcase }})</h3>
 
+             {% assign summary = verb_detail.summary %}
+             {% assign description = verb_detail.description %}
+             <h4><a name="#{{ path_name }}"></a>{{ summary }}</h4>
+             <p>{{ path_name }}</a> ({{ verb_name | upcase }})</p>
+             <p>{{ description }}</p>
              <p><strong>Parameters:</strong></p>
              <table class="table table-striped">
                <thead>
