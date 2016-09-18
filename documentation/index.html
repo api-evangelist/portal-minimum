@@ -94,7 +94,7 @@ title: '{{ site.documentation.title }}'
                    <tr>
                      <td>{{ response_name }}</td>
                      <td>{{ response_detail.description }}</td>
-                     <td>--{{ response_detail.schema.items[0] }}--</td>
+                     <td>--{{ response_detail.schema.items }}--</td>
                    </tr>
                    {% endfor %}
                  </tbody>
@@ -118,33 +118,33 @@ title: '{{ site.documentation.title }}'
 
            {% for def in definition_detail %}
 
-           {% assign definition_type = def.type %}
-           {% assign definition_properties = def.properties %}
-           --{{ definition_properties }}--
-           <!-- List All the Parameters-->
-           {% if def.properties %}
-             <p><strong>Properties:</strong></p>
-             <table class="table table-striped">
-               <thead>
-                 <tr>
-                   <th>name</th>
-                   <th>type</th>
-                   <th>description</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 {% for property in definition_properties %}
-                 {% assign property_name = property[0] %}
-                 {% assign property_details = property[1] %}
-                 <tr>
-                   <td>{{ property_names }}</td>
-                   <td>{{ property_details.type }}</td>
-                   <td>{{ property_details.description }}</td>
-                 </tr>
-                 {% endfor %}
-               </tbody>
-             </table>
-           {% endif %}
+             {% assign definition_type = def.type %}
+             {% assign definition_properties = def.properties %}
+             --{{ def }}--
+             <!-- List All the Parameters-->
+             {% if def.properties %}
+               <p><strong>Properties:</strong></p>
+               <table class="table table-striped">
+                 <thead>
+                   <tr>
+                     <th>name</th>
+                     <th>type</th>
+                     <th>description</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   {% for property in definition_properties %}
+                   {% assign property_name = property[0] %}
+                   {% assign property_details = property[1] %}
+                   <tr>
+                     <td>{{ property_names }}</td>
+                     <td>{{ property_details.type }}</td>
+                     <td>{{ property_details.description }}</td>
+                   </tr>
+                   {% endfor %}
+                 </tbody>
+               </table>
+             {% endif %}
 
            {% endfor %}
          {% endfor %}
