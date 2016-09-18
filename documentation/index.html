@@ -8,6 +8,7 @@ title: '{{ site.documentation.title }}'
 
      <div class="col-sm-3 col-md-2 sidebar">
 
+       <p><strong>Paths:</strong></p>
        <ul class="nav nav-sidebar">
          <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
          {% for path in site.api.paths limit:25 %}
@@ -16,6 +17,7 @@ title: '{{ site.documentation.title }}'
          {% endfor %}
        </ul>
 
+       <p><strong>Definitions:</strong></p>
        <ul class="nav nav-sidebar">
          {% for definition in site.api.definitions %}
 
