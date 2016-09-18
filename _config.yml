@@ -76,8 +76,6 @@ authentication:
 #APIs
 apis:
 
-  version: "1.0.0"
-
   # the domain of the service
   host: api.apievangelist.com
 
