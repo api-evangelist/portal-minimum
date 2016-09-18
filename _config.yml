@@ -21,7 +21,7 @@ portal_url: http://portal.minimum.apievangelist.com
 portal_description: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
 
 #Getting Started - This section gives developers all the informaiton they will need to get started using an API.
-getting_started:
+authentication:
   # A title for the getting started section
   title: Getting Started With The API
   # A description for the getting started section.
@@ -52,6 +52,7 @@ authentication:
   # The overal authentication title & description
   title: Authentication
   description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-2.png
 
   # The title & description if API is open.
   open_title: Open API (Publicly Available)
@@ -70,12 +71,18 @@ authentication:
 
   # The title & description if API is open.
   oauth_title: OAuth
-  oauth_description: We use OAuth to secure access to the API, and manage access to informaiton.
+  oauth_description: We use OAuth to secure the API, and manage access to information.
   oauth_url: http://en.wikipedia.org/wiki/OAuth
+
+  # The title & description if API is open.
+  json_web_token_title: JSON Web Tokens
+  json_web_token_description: We use JSON Web Tokens to secure the API, and manage access to information.
+  json_web_token_url: https://jwt.io/
 
   # The title & description if API is open.
   other_title: Custom Authentication
   other_description: We use a custom or proprietary approach to authentication for all API calls.
+  other_url: http://example.com/auth/
 
   # The footer for the content and page.
   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.

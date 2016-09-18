@@ -1,18 +1,21 @@
 ---
-layout: page
-title: Authentication
+layout: inner
+title: '{{ site.authentication.title }}'
 ---
 
-<p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-authentication.png" align="right" width="150" style="padding: 15px;" /></p>
-<p>This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API.</p>
-<p>Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication like:</p>
-
-<ul>
-	<li><a href="http://en.wikipedia.org/wiki/Basic_access_authentication"><strong>Basic Auth</strong></a> - Basic access authentication is a method for an HTTP user agent to provide a user name and password when making a request.</li>
-	<li><a href="http://en.wikipedia.org/wiki/Application_programming_interface_key"><strong>API Keys</strong></a> - API keys are unique tokens that applications can use pass when calling an API.</li>
-	<li><a href="http://en.wikipedia.org/wiki/OAuth"><strong>oAuth</strong></a> - OAuth provides client applications a secure delegated access to server resources on behalf of a resource owner.</li>
-</ul>
-
-<p>consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls.</p>
-
-<p>Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.</p>
+<div class="container">
+  <div class="row">
+		{% if site.authentication.image %}<img src="{{ site.authentication.image }}" align="right" width="15%" style="padding: 15px;" />{% endif %}
+		<h3>{{ site.authentication.title }}</h3>
+		{% if site.authentication.description %}<p>{{ site.authentication.description }}</p>{% endif %}
+		<ol>
+			<li><a href="{{ site.authentication.open_url }}"><strong>{{ site.authentication.open_title }}</strong></a> - {{ site.authentication.open_description }}</li>
+			<li><a href="{{ site.authentication.basic_url }}"><strong>{{ site.authentication.basic_title }}</strong></a> - {{ site.authentication.basic_description }}</li>
+			<li><a href="{{ site.authentication.keys_url }}"><strong>{{ site.authentication.keys_title }}</strong></a> - {{ site.authentication.keys_description }}</li>
+			<li><a href="{{ site.authentication.oauth_url }}"><strong>{{ site.authentication.oauth_title }}</strong></a> - {{ site.authentication.oauth_description }}</li>
+			<li><a href="{{ site.authentication.json_web_token_url }}"><strong>{{ site.authentication.json_web_token_title }}</strong></a> - {{ site.authentication.json_web_token_description }}</li>
+			<li><a href="{{ site.authentication.other_url }}"><strong>{{ site.authentication.other_title }}</strong></a> - {{ site.authentication.other_description }}</li>
+		</ol>
+		{% if site.authentication.footer %}<p>{{ site.authentication.footer }}</p>{% endif %}
+	</div>
+</div>
