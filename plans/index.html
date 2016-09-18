@@ -17,7 +17,7 @@ title: '{{ site.plans.title }}'
     <table border="0" style="border: 0px; width: 100%; margin-top: 25px; margin-bottom: 25px;">
       <tr>
         {% for tier in site.plans.tiers limit:5 %}
-          <td align="left">
+          <td align="left" style="padding: 10px;">
 
               <a href="{{ tier.signup_url }}" target="_blank" title="Signup">
                 <img src="{{ tier.image }}" width="10%" align="left" style="padding: 5px;" />
