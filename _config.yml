@@ -96,3 +96,16 @@ apis:
        get:
          summary: Products
          description: The description
+
+# Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
+communication:
+  # The title and description for the self service support available for site.
+  title:
+  description:
+  blog_url:
+  blog_rss_url:
+  blog_atom_url:
+  twitter: @twitter
+  linkedin: @linkedin
+  github: @github
+  footer:

@@ -23,8 +23,15 @@ layout: page
   <div class="col-md-4">
     <h4>APIs (Full Documentation)</h4>
     <ul>
-      <li>One</li>
-      <li>Two</li>
+      {% for path in site.apis.paths limit:25 %}
+        {% assign path_name = path[0] %}
+        {% assign path_detail = path[1] %}
+        {% for verb in path_detail %}
+          {% assign verb_name = verb[0] %}
+          {% assign verb_detail = verb[1] %}
+          <li><a href="/documentation/#{{ post.url }}">{{ path_name }}</a> [{{ verb_name }}]</li>
+        {% endfor %}
+      {% endfor %}
     </ul>
  </div>
   <div class="col-md-4">
