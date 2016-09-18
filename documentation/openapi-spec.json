@@ -52,7 +52,7 @@ layout: none
             "required": {{ parameter.required }},
             "type": {{ parameter.type }},
             "format": "{{ parameter.format }}"
-          }{% if forloop.last == false %},{% endif %}  {% endfor %}
+          }{% if forloop.last == false %},{% endif %}
         {% endif %}
         ],
         "responses": {
