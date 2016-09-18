@@ -73,11 +73,14 @@ authentication:
    # The footer for the content and page.
    footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
-#APIs
-apis:
+# Listing of all the APIs
+api:
+
+  # The version for the API(s)
+  version: "1.0.0"
 
   # the domain of the service
-  host: api.apievangelist.com
+  host: api.example.com
 
   # array of all schemes that your API supports
   schemes:
@@ -94,7 +97,7 @@ apis:
     - application/hal+json
     - application/vnd.api+json
     - application/vnd.collection+json
-   - application/vnd.siren+json
+    - application/vnd.siren+json
 
    #paths for the API
    paths:

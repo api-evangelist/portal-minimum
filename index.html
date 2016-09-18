@@ -24,7 +24,7 @@ layout: page
     <h4>APIs (Full Documentation)</h4>
     show up??
     <ul>
-      {% for path in site.apis.paths limit:25 %}
+      {% for path in site.api.paths limit:25 %}
         {% assign path_name = path[0] %}
         <li>-{{ path_name }}-</li>
         {% assign path_detail = path[1] %}
