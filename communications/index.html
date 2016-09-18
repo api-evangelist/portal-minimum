@@ -10,12 +10,12 @@ title: '{{ site.communication.title }}'
 		<p>{{ site.communication.description }}</p>
 
     <center>
-    <table width="75%" cellpadding="5" border="0">
+    <table width="75%" cellpadding="10" cellspacing="10" border="0" style="border: 0xp;">
       <tr>
         {% if site.communication.blog_url %}
           <td align="center" style="border-top: 1px solid #CCC;">
 
-              <a href="http://blog.apiary.io/" target="_blank" title="Blog">
+              <a href="{{ site.communication.blog_url }}" target="_blank" title="Blog">
                 <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png" width="43" align="center" />
               </a>
 
