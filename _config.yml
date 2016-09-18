@@ -12,6 +12,7 @@
 # Every API should have a simple portal providing access to the API and all supporting resources.
 
 # Name - Provide a simple name for your API / developer portal.
+portal_title: 'API Portal'
 portal_name: 'Minimum Viable API Portal'
 
 # URL - developer.[yourdomain].com
