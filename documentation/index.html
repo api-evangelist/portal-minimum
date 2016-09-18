@@ -127,11 +127,11 @@ title: '{{ site.documentation.title }}'
            {% assign definition_name = definition[0] %}
            {% assign definition_detail = definition[1] %}
 
-           <a name="#definition-{{ definition_name }}"></a>
-           <h4 style="padding-top:5px; padding-bottom:5px;">{{ definition_name }}</h4>
+           {% assign definition_type = definition_detail.type %}
+           {% assign definition_properties = definition_detail.properties %}
 
-             {% assign definition_type = definition_detail.type %}
-             {% assign definition_properties = definition_detail.properties %}
+           <a name="#definition-{{ definition_name }}"></a>
+           <h4 style="padding-top:5px; padding-bottom:5px;">{{ definition_name }} ({{ definition_type }})</h4>
 
              <!-- List All the Parameters-->
              {% if definition_detail.properties %}
