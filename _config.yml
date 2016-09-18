@@ -48,67 +48,73 @@ getting_started:
 
 # Authentication - Help developers understand authentication. There are a handful of common approaches from BasicAuth, and API keys, to oAuth--provide a simple overview of how authentication is handled.
 authentication:
- - # The overal authentication title & description
-   title: Authentication
-   description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
-   # The title & description if API is open.
-   open_title: Open API (Publicly Available)
-   open_description: We do not use authentication, with all API paths left open to the public.
-   open_url: http://example.com/open/
-   # The title & description if API is open.
-   basic_title: Basic Authentication
-   basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
-   basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
-   # The title & description if API is open.
-   keys_title: API Keys
-   keys_description: We employ a public keys and secret key for making calls to the API, sent as headers.
-   keys_url: http://en.wikipedia.org/wiki/Application_programming_interface_key
-   # The title & description if API is open.
-   oauth_title: OAuth
-   oauth_description: We use OAuth to secure access to the API, and manage access to informaiton.
-   oauth_url: http://en.wikipedia.org/wiki/OAuth
-   # The title & description if API is open.
-   other_title: Custom Authentication
-   other_description: We use a custom or proprietary approach to authentication for all API calls.
-   # The footer for the content and page.
-   footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
+  # The overal authentication title & description
+  title: Authentication
+  description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
+
+  # The title & description if API is open.
+  open_title: Open API (Publicly Available)
+  open_description: We do not use authentication, with all API paths left open to the public.
+  open_url: http://example.com/open/
+
+  # The title & description if API is open.
+  basic_title: Basic Authentication
+  basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
+  basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
+
+  # The title & description if API is open.
+  keys_title: API Keys
+  keys_description: We employ a public keys and secret key for making calls to the API, sent as headers.
+  keys_url: http://en.wikipedia.org/wiki/Application_programming_interface_key
+
+  # The title & description if API is open.
+  oauth_title: OAuth
+  oauth_description: We use OAuth to secure access to the API, and manage access to informaiton.
+  oauth_url: http://en.wikipedia.org/wiki/OAuth
+
+  # The title & description if API is open.
+  other_title: Custom Authentication
+  other_description: We use a custom or proprietary approach to authentication for all API calls.
+
+  # The footer for the content and page.
+  footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
 # Listing of all the APIs
 api:
 
   # The version for the API(s)
-  version: 1.0.0
+  version: 1
 
   # the domain of the service
   host: api.example.com
 
   # array of all schemes that your API supports
   schemes:
-    - https
+   - https
 
   # will be prefixed to all paths
   basePath: /v1
 
   # media types produced
   produces:
-    - text/html
-    - application/json
-    - application/xml
-    - application/hal+json
-    - application/vnd.api+json
-    - application/vnd.collection+json
-    - application/vnd.siren+json
+   - text/html
+   - application/json
+   - application/xml
+   - application/hal+json
+   - application/vnd.api+json
+   - application/vnd.collection+json
+   - application/vnd.siren+json
 
-   #paths for the API
-   paths:
-     /products:
-       get:
-         summary: Products
-         description: The description of the product.
-     /services:
-       get:
-         summary: Services
-         description: The description of the service.
+  #paths for the API
+  paths:
+    /products:
+     get:
+      summary: Products
+      description: The description of the product.
+    /services:
+     get:
+      summary: Services
+      description: The description of the service.
 
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
 communication:
