@@ -95,17 +95,22 @@ apis:
      /products:
        get:
          summary: Products
-         description: The description
+         description: The description of the product.
+     /services:
+       get:
+         summary: Services
+         description: The description of the service.        
 
 # Communication - Setup the proper communication channels like a blog and PR section, as well as a healthy social presence on Twitter, LinkedIn, Facebook, or other places your audience already exists.
 communication:
   # The title and description for the self service support available for site.
-  title:
-  description:
-  blog_url:
-  blog_rss_url:
-  blog_atom_url:
-  twitter: @twitter
-  linkedin: @linkedin
-  github: @github
-  footer:
+  title: Platform Communications
+  description: This is the communication center for the API platform. We understand that it is important to communicate with our developer community, and that communications done well can also attract new developes, and interest in our API platform.
+  blog_url: http://apievangelist.com/blog/
+  blog_rss_url: http://apievangelist.com/blog.xml
+  blog_atom_url: http://apievangelist.com/atom.xml
+  twitter_user: apievangelist
+  linkedin_user: apievangelist
+  github_user: kilane
+  github_org: apievangelist
+  footer: Even if an API is a side project, we can make sure and setup as well as monitor a handful of common communication channels. Successful API providers are using blogs, Twitter, and Github to efficiently manage platform communications for their APIs.
