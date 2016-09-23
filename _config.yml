@@ -18,7 +18,7 @@ portal_name: 'Minimum API Portal'
 portal_url: http://portal.minimum.apievangelist.com
 
 # Description - Provide a concise description of what a platform does.
-portal_description: This is a forkable, resusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
+portal_description: This is a forkable, reusable API portal that runs using Jekyll. It is meant to be a single checklist that API providers can use to setup a developer portal, and make sure they are providing the minimum amount of documentation, and other resources that developers are used to.
 
 # Contact Information
 portal_contact_name: Kin Lane
@@ -61,7 +61,7 @@ authentication:
   # Turn on the authentication
   active: true
 
-  # The overal authentication title & description
+  # The overall authentication title & description
   title: Authentication
   description: This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API. Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-2.png
@@ -73,7 +73,7 @@ authentication:
 
   # The title & description if API is open.
   basic_title: Basic Authentication
-  basic_description: We employ Basic Authentication for making calls to the API, requring user and password sent as headers.
+  basic_description: We employ Basic Authentication for making calls to the API, requiring user and password sent as headers.
   basic_url: http://en.wikipedia.org/wiki/Basic_access_authentication
 
   # The title & description if API is open.
@@ -97,7 +97,7 @@ authentication:
   other_url: http://example.com/auth/
 
   # The footer for the content and page.
-  footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
+  footer: Consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow developers to manually generate access tokens, to simply making test API calls. Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.
 
 # Documentation
 documentation:
@@ -328,7 +328,7 @@ plans:
         - Limit Three
       signup_url: http://signup/url/
 
-  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of aceess look like, and what it takes to get there. Look at the pricing of other popular APIs, to get an idea of the normal tkype of presenting pricing.
+  footer: Make sure and provide a relief valve for pricing, allowing developers to pay for what they need. Be as transparent as possible about what the upper tiers of access look like, and what it takes to get there. Look at the pricing of other popular APIs, to get an idea of the normal type of presenting pricing.
 
 # Support
 support:
@@ -380,7 +380,7 @@ self_service_support:
   forum_url: http://forum.com
 
   #Stack Exchange
-  stack_exchange_label: Get Support Over At Stack Excange
+  stack_exchange_label: Get Support Over At Stack Exchange
   stack_exchange_url: http://stackexchange.com
 
   footer: If there is a place we should be offering support that might reach you, and other developers please let us know of where we might connect with you.
