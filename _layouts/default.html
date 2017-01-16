@@ -31,14 +31,14 @@
             {% if site.support.active == true %}<li{% if page.title == 'Support' %} class="active"{% endif %}><a href="/support/">Support</a></li>{% endif %}
           </ul>
         </div>
-        <div id="navbar" class="navbar-collapse collapse" style="padding-right: 100px;">
+        <div id="navbar" class="navbar-collapse collapse">
           {% if site.getting_started.signup_active == true %}
           <form class="navbar-form navbar-right">
             <button type="submit" class="btn btn-success">{{ site.getting_started.signup_label }}</button>
           </form>
           {% endif %}
           {% if site.getting_started.login_active == true %}
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right" style="margin-right: 25px;">
             <button type="submit" class="btn btn-success">{{ site.getting_started.login_label }}</button>
           </form>
           {% endif %}
