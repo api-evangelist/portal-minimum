@@ -24,6 +24,10 @@ portal_description: This is a forkable, reusable API portal that runs using Jeky
 portal_contact_name: Kin Lane
 portal_contact_email: info@apievangelist.com
 
+# Github Repo Information
+github_user: api-evangelist
+github_repo: portal-minimum
+
 #Getting Started
 getting_started:
 
@@ -238,8 +242,8 @@ code:
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png
 
   # Information about github account for the platform (either user or org)
-  github_org: apievangelist
-  github_user: kinlane
+  github_org: api-evangelist
+  #github_user: kinlane
 
   # What full SDKs are available
   sdks:
